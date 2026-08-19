@@ -230,10 +230,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
   <div class="card" id="cgc" style="display:none"><div class="ch">📌 Captured — General</div><div class="cb"><ul class="cl" id="cgl"></ul></div></div>
   <div class="card">
+    <div class="ch">📍 Due Today &amp; Overdue</div>
+    <div class="cb" id="todayList"></div>
+  </div>
+  <div class="card">
+    <div class="ch">💾 Backup Your Data</div>
+    <div class="cb">
+      <button class="cap-btn" onclick="exportData()">⬇️ Download Backup (.json)</button>
+      <div class="hint">Save this file somewhere safe — it's a full copy of everything in this dashboard.</div>
+    </div>
+  </div>
+  <div class="card">
     <div class="ch">✅ Today's Priorities</div>
     <div class="cb">
       <ul id="prl" class="cl"></ul>
-      <div class="ar"><input class="gw" type="text" id="pri" placeholder="Add priority…"><button class="sb" onclick="addPri()">Add</button></div>
+      <div class="ar"><input class="gw" type="text" id="pri" placeholder="Add priority…"><input type="date" id="priDue" style="width:132px"><button class="sb" onclick="addPri()">Add</button></div>
     </div>
   </div>
   <div class="card">
@@ -309,6 +320,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div id="hpl"></div>
       <div class="ar">
         <input class="gw" type="text" id="hpi" placeholder="New project…">
+        <input type="date" id="hpiDue" style="width:132px">
         <select id="hps"><option value="planned">Planned</option><option value="active">In Progress</option><option value="done">Done</option></select>
         <button class="sb" onclick="addHP()">Add</button>
       </div>
@@ -458,6 +470,50 @@ function $(i){return document.getElementById(i);}
 function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 function ld(k,d){try{var v=localStorage.getItem(k);return v!==null?JSON.parse(v):d;}catch(e){return d;}}
 
+// Today / Overdue strip — pulls together bills, priorities, home projects
+function rToday(){
+  var el=$('todayList');
+  if(!el)return;
+  var now=new Date(),todayStr=now.toISOString().split('T')[0],domToday=now.getDate();
+  var rows=[];
+  (typeof bills!=='undefined'?bills:[]).forEach(function(b){
+    if(b.paid)return;
+    if(b.day<domToday)rows.push({label:b.name,type:'Bill',ov:true,when:'Day '+b.day});
+    else if(b.day===domToday)rows.push({label:b.name,type:'Bill',ov:false,when:'Today'});
+  });
+  (typeof pris!=='undefined'?pris:[]).forEach(function(p){
+    if(p.done||!p.due)return;
+    if(p.due<todayStr)rows.push({label:p.text,type:'Priority',ov:true,when:p.due});
+    else if(p.due===todayStr)rows.push({label:p.text,type:'Priority',ov:false,when:'Today'});
+  });
+  (typeof hps!=='undefined'?hps:[]).forEach(function(h){
+    if(h.status==='done'||!h.due)return;
+    if(h.due<todayStr)rows.push({label:h.name,type:'Home Project',ov:true,when:h.due});
+    else if(h.due===todayStr)rows.push({label:h.name,type:'Home Project',ov:false,when:'Today'});
+  });
+  if(!rows.length){el.innerHTML='<div class="empty">Nothing due today or overdue — nice! 🎉</div>';return;}
+  rows.sort(function(a,b){return (b.ov?1:0)-(a.ov?1:0);});
+  el.innerHTML=rows.map(function(r){
+    return '<div class="item"><span class="bd '+(r.ov?'bdr':'bdb')+'" style="flex-shrink:0">'+r.type+'</span><label style="flex:1">'+r.label+'</label><span class="due'+(r.ov?' ov':'')+'">'+(r.ov?'Overdue · ':'')+r.when+'</span></div>';
+  }).join('');
+}
+
+// Full data backup — downloads everything in localStorage as one JSON file
+function exportData(){
+  var data={};
+  for(var i=0;i<localStorage.length;i++){
+    var k=localStorage.key(i);
+    try{data[k]=JSON.parse(localStorage.getItem(k));}catch(e){data[k]=localStorage.getItem(k);}
+  }
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  var d=new Date().toISOString().split('T')[0];
+  a.href=url;a.download='dashboard-backup-'+d+'.json';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 // Clock
 function tick(){
   var now=new Date(),h=now.getHours();
@@ -503,12 +559,16 @@ var PRI_KEY='pris_'+new Date().toDateString();
 var pris=ld(PRI_KEY,[]);
 function rpri(){
   var ul=$('prl');
-  if(!pris.length){ul.innerHTML='<li class="cli" style="color:var(--mu)">No priorities yet!</li>';return;}
+  if(!pris.length){ul.innerHTML='<li class="cli" style="color:var(--mu)">No priorities yet!</li>';rToday();return;}
+  var todayStr=new Date().toISOString().split('T')[0];
   ul.innerHTML=pris.map(function(p,i){
-    return '<li class="item'+(p.done?' done':'')+'"><input type="checkbox" id="pr'+i+'" '+(p.done?'checked':'')+' onchange="togPri('+i+')"><label for="pr'+i+'">'+p.text+'</label><button class="del" onclick="delPri('+i+')">×</button></li>';
+    var dueBadge='';
+    if(p.due){var ov=!p.done&&p.due<todayStr;dueBadge=' <span class="due'+(ov?' ov':'')+'">'+(ov?'⚠️ ':'')+p.due+'</span>';}
+    return '<li class="item'+(p.done?' done':'')+'"><input type="checkbox" id="pr'+i+'" '+(p.done?'checked':'')+' onchange="togPri('+i+')"><label for="pr'+i+'">'+p.text+dueBadge+'</label><button class="del" onclick="delPri('+i+')">×</button></li>';
   }).join('');
+  rToday();
 }
-function addPri(){var t=$('pri').value.trim();if(!t)return;pris.push({text:t,done:false});sv(PRI_KEY,pris);$('pri').value='';rpri();}
+function addPri(){var t=$('pri').value.trim();if(!t)return;var d=$('priDue')?$('priDue').value:'';pris.push({text:t,done:false,due:d});sv(PRI_KEY,pris);$('pri').value='';if($('priDue'))$('priDue').value='';rpri();}
 function togPri(i){pris[i].done=!pris[i].done;sv(PRI_KEY,pris);rpri();}
 function delPri(i){pris.splice(i,1);sv(PRI_KEY,pris);rpri();}
 $('pri').addEventListener('keydown',function(e){if(e.key==='Enter')addPri();});
@@ -683,11 +743,12 @@ function rbills(){
   var el=$('bll');
   var up=bills.filter(function(b){return !b.paid;}),od=bills.filter(function(b){return !b.paid&&b.day<tod;}),pd=bills.filter(function(b){return b.paid;});
   $('bdu').textContent=up.length;$('bod').textContent=od.length;$('bpd').textContent=pd.length;
-  if(!bills.length){el.innerHTML='<div class="empty">Add your bills below.</div>';return;}
+  if(!bills.length){el.innerHTML='<div class="empty">Add your bills below.</div>';rToday();return;}
   el.innerHTML=bills.map(function(b,i){
     var ov=!b.paid&&b.day<tod;
     return '<div class="item'+(b.paid?' done':'')+'"><input type="checkbox" id="bl'+i+'" '+(b.paid?'checked':'')+' onchange="togBill('+i+')"><label for="bl'+i+'">'+b.name+'</label><span class="due'+(ov?' ov':'')+'">Due '+b.day+(ov?' ⚠️':'')+'</span><button class="del" onclick="delBill('+i+')">×</button></div>';
   }).join('');
+  rToday();
 }
 function addBill(){var n=$('bln').value.trim(),d=parseInt($('bld').value)||1;if(!n)return;bills.push({name:n,day:d,paid:false});sv('bills_v2',bills);$('bln').value='';$('bld').value='';rbills();}
 function togBill(i){bills[i].paid=!bills[i].paid;sv('bills_v2',bills);rbills();}
@@ -728,12 +789,16 @@ var hpSt={planned:'background:#f0ece6;color:var(--mu)',active:'background:var(--
 var hpLb={planned:'Planned',active:'In Progress',done:'✓ Done'};
 function rhp(){
   var el=$('hpl');
-  if(!hps.length){el.innerHTML='<div class="empty">No projects yet!</div>';return;}
+  if(!hps.length){el.innerHTML='<div class="empty">No projects yet!</div>';rToday();return;}
+  var todayStr=new Date().toISOString().split('T')[0];
   el.innerHTML=hps.map(function(p,i){
-    return '<div class="proj"><span style="font-size:11px;border-radius:4px;padding:2px 7px;font-weight:600;white-space:nowrap;'+(hpSt[p.status]||'')+'">'+hpLb[p.status]+'</span><span class="pt">'+p.name+'</span><select class="msel" onchange="updHP('+i+',this.value)"><option value="planned" '+(p.status==='planned'?'selected':'')+'>Planned</option><option value="active" '+(p.status==='active'?'selected':'')+'>In Progress</option><option value="done" '+(p.status==='done'?'selected':'')+'>Done</option></select><button class="del" onclick="delHP('+i+')">×</button></div>';
+    var dueBadge='';
+    if(p.due){var ov=p.status!=='done'&&p.due<todayStr;dueBadge=' <span class="due'+(ov?' ov':'')+'" style="margin-left:6px;font-size:12px">'+(ov?'⚠️ ':'')+p.due+'</span>';}
+    return '<div class="proj"><span style="font-size:11px;border-radius:4px;padding:2px 7px;font-weight:600;white-space:nowrap;'+(hpSt[p.status]||'')+'">'+hpLb[p.status]+'</span><span class="pt">'+p.name+dueBadge+'</span><select class="msel" onchange="updHP('+i+',this.value)"><option value="planned" '+(p.status==='planned'?'selected':'')+'>Planned</option><option value="active" '+(p.status==='active'?'selected':'')+'>In Progress</option><option value="done" '+(p.status==='done'?'selected':'')+'>Done</option></select><button class="del" onclick="delHP('+i+')">×</button></div>';
   }).join('');
+  rToday();
 }
-function addHP(){var n=$('hpi').value.trim(),s=$('hps').value;if(!n)return;hps.push({name:n,status:s});sv('homeProjects',hps);$('hpi').value='';rhp();}
+function addHP(){var n=$('hpi').value.trim(),s=$('hps').value,d=$('hpiDue')?$('hpiDue').value:'';if(!n)return;hps.push({name:n,status:s,due:d});sv('homeProjects',hps);$('hpi').value='';if($('hpiDue'))$('hpiDue').value='';rhp();}
 function updHP(i,s){hps[i].status=s;sv('homeProjects',hps);rhp();}
 function delHP(i){hps.splice(i,1);sv('homeProjects',hps);rhp();}
 $('hpi').addEventListener('keydown',function(e){if(e.key==='Enter')addHP();});
@@ -1341,6 +1406,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if(typeof rDiet==='function')rDiet();
   if(typeof rMeds==='function')rMeds();
   if(typeof rDave==='function')rDave();
+  if(typeof rToday==='function')rToday();
 });
 </script>
 
