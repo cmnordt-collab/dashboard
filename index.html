@@ -241,13 +241,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="cb" id="todayList"></div>
   </div>
   <div class="card">
-    <div class="ch">💾 Backup Your Data</div>
-    <div class="cb">
-      <button class="cap-btn" onclick="exportData()">⬇️ Download Backup (.json)</button>
-      <div class="hint">Save this file somewhere safe — it's a full copy of everything in this dashboard.</div>
-    </div>
-  </div>
-  <div class="card">
     <div class="ch">✅ Today's Priorities</div>
     <div class="cb">
       <ul id="prl" class="cl"></ul>
@@ -258,6 +251,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="ch">📝 Today's Notes</div>
     <div class="cb"><textarea class="notes" id="nte" placeholder="Jot anything down…"></textarea></div>
   </div>
+  <div class="card">
+    <div class="ch">💾 Backup Your Data</div>
+    <div class="cb">
+      <button class="cap-btn" onclick="exportData()">⬇️ Download Backup (.json)</button>
+      <div class="hint">Save this file somewhere safe — it's a full copy of everything in this dashboard.</div>
+    </div>
+  </div>
 </div>
 
 <!-- PBO -->
@@ -265,24 +265,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="card">
     <div class="ch">🏳️‍🌈 PBO Pride 2026 — Entertainment Tasks</div>
     <div class="cb">
-      <div class="sec">⚡ Up Next <span style="font-size:11px;font-weight:400;color:var(--mu);text-transform:none;letter-spacing:0">(check off as you update Trello)</span></div>
+      <div class="sec">⚡ Up Next</div>
       <div id="pbo-upnext"></div>
-      <div class="ar" style="margin-top:6px">
+      <div class="sec">📋 To Do</div>
+      <div id="pbo-todo"></div>
+      <div class="sec">🗓️ July</div>
+      <div id="pbo-july"></div>
+      <div class="ar" style="margin-top:10px;flex-wrap:wrap">
         <input class="gw" type="text" id="pboIn" placeholder="Add item…">
+        <input type="text" id="pboTag" placeholder="Tag (optional)" style="width:110px">
+        <input type="text" id="pboAmt" placeholder="$ (optional)" style="width:84px">
+        <select id="pboSec"><option value="upnext">Up Next</option><option value="todo">To Do</option><option value="july">July</option></select>
         <button class="sb" onclick="addPBO()">Add</button>
       </div>
-      <div class="sec">📋 To Do</div>
-      <div class="task"><div class="ti">🔲</div><div><div class="tt">Recruit Additional Parade Participants</div><div class="tm2"><span class="bd bdb">Parade</span><span class="bd bdx">Late Jun</span></div></div></div>
-      <div class="task"><div class="ti">🔲</div><div><div class="tt">Send Contracts to Main Stage Drag Artists (lineup pending)</div><div class="tm2"><span class="bd bdb">Drag Show</span></div></div></div>
-      <div class="sec">🗓️ July</div>
-      <div class="task" style="opacity:.75"><div class="ti">📌</div><div><div class="tt">Finalize &amp; Sign Bear Roots Contract ($1,200)</div><div class="tm2"><span class="bd bdp">Music</span></div></div></div>
-      <div class="task" style="opacity:.75"><div class="ti">📌</div><div><div class="tt">Book DJ Mouse ($100)</div><div class="tm2"><span class="bd bdp">Dance Party</span></div></div></div>
-      <div class="task" style="opacity:.75"><div class="ti">📌</div><div><div class="tt">Confirm Emily Mussolino ($300)</div><div class="tm2"><span class="bd bdp">Music</span></div></div></div>
-      <div class="task" style="opacity:.75"><div class="ti">📌</div><div><div class="tt">Finalize Drag Show Lineup with Amanduh</div><div class="tm2"><span class="bd bdp">Drag Show</span></div></div></div>
     </div>
   </div>
   <div class="card" id="cpbc" style="display:none"><div class="ch">⚡ PBO Notes</div><div class="cb"><ul class="cl" id="cpbl"></ul></div></div>
-  <p class="hint">For live updates open the full dashboard in Cowork on your computer.</p>
 </div>
 
 <!-- FINANCE -->
@@ -540,7 +538,7 @@ function doSearch(q){
   (typeof bills!=='undefined'?bills:[]).forEach(function(b){add(b.name,'Bill','fin');});
   (typeof exps!=='undefined'?exps:[]).forEach(function(e){add(e.name,'Expense','fin');});
   (typeof actions!=='undefined'?actions:[]).forEach(function(a){add(a.text,'Financial Goal','fin');});
-  (typeof pboItems!=='undefined'?pboItems:[]).forEach(function(p){add(p.text,'PBO Pride','pbo');});
+  (typeof pboTasks!=='undefined'?pboTasks:[]).forEach(function(p){add(p.text,'PBO Pride','pbo');});
   (typeof groc!=='undefined'?groc:[]).forEach(function(g){add(g.text,'Grocery','lists','swl','groc');});
   (typeof low!=='undefined'?low:[]).forEach(function(l){add(l.text,"Lowe's List",'lists','swl','low');});
   (typeof rets!=='undefined'?rets:[]).forEach(function(r){add((r.store||'')+' — '+(r.item||''),'Return','lists','swl','ret');});
@@ -888,7 +886,7 @@ function delHP(i){hps.splice(i,1);sv('homeProjects',hps);rhp();}
 $('hpi').addEventListener('keydown',function(e){if(e.key==='Enter')addHP();});
 rhp();
 
-// PBO Up Next
+// PBO Tasks — Up Next, To Do, and July all live/editable now (no more desktop-only editing)
 var PBO_UN_SEED={ts:1782432000000,items:[
   {text:'June 22 Meeting Agenda — Parade Decision',tag:'General',done:false},
   {text:'Reach Out to BoomUnit — Primary Parade Band',tag:'Parade',done:false},
@@ -897,18 +895,57 @@ var PBO_UN_SEED={ts:1782432000000,items:[
   {text:"Confirm Jolene's Dance Studio Contact for Parade",tag:'Parade',done:false},
   {text:'Ask Drag Performers to Stay for Parade',tag:'Parade',done:false}
 ]};
-(function seedPBO(){var s=ld('pbo_seed_ts',0);if(PBO_UN_SEED.ts>s){sv('pbo_upnext_v1',PBO_UN_SEED.items);sv('pbo_seed_ts',PBO_UN_SEED.ts);}})();
-var pboItems=ld('pbo_upnext_v1',PBO_UN_SEED.items);
-function rPBO(){
-  var el=$('pbo-upnext');
-  if(!pboItems.length){el.innerHTML='<div class="empty">All caught up! ✓</div>';return;}
-  el.innerHTML=pboItems.map(function(p,i){
-    return '<div class="item'+(p.done?' done':'')+'"><input type="checkbox" id="pb'+i+'" '+(p.done?'checked':'')+' onchange="togPBO('+i+')"><label for="pb'+i+'">'+p.text+(p.tag?' <span class="bd bdg" style="font-size:10px;margin-left:4px">'+p.tag+'</span>':'')+'</label><button class="del" onclick="delPBO('+i+')">x</button></div>';
+var PBO_TODO_SEED=[
+  {text:'Recruit Additional Parade Participants',tag:'Parade',amount:'',section:'todo',done:false},
+  {text:'Send Contracts to Main Stage Drag Artists (lineup pending)',tag:'Drag Show',amount:'',section:'todo',done:false}
+];
+var PBO_JULY_SEED=[
+  {text:'Finalize & Sign Bear Roots Contract',tag:'Music',amount:'$1,200',section:'july',done:false},
+  {text:'Book DJ Mouse',tag:'Dance Party',amount:'$100',section:'july',done:false},
+  {text:'Confirm Emily Mussolino',tag:'Music',amount:'$300',section:'july',done:false},
+  {text:'Finalize Drag Show Lineup with Amanduh',tag:'Drag Show',amount:'',section:'july',done:false}
+];
+function migratePBOTasks(){
+  var existing=ld('pbo_tasks_v1',null);
+  if(existing&&existing.length)return existing;
+  var legacySrc=ld('pbo_upnext_v1',null)||PBO_UN_SEED.items;
+  var legacy=legacySrc.map(function(p){return {text:p.text,tag:p.tag||'',amount:'',section:'upnext',done:!!p.done};});
+  var merged=legacy.concat(PBO_TODO_SEED).concat(PBO_JULY_SEED);
+  sv('pbo_tasks_v1',merged);
+  return merged;
+}
+var pboTasks=migratePBOTasks();
+function pboSectionHtml(section,elId){
+  var el=$(elId);
+  if(!el)return;
+  var items=[];
+  pboTasks.forEach(function(p,i){if(p.section===section)items.push(i);});
+  if(!items.length){el.innerHTML='<div class="empty">All caught up! ✓</div>';return;}
+  el.innerHTML=items.map(function(i){
+    var p=pboTasks[i];
+    var tag=p.tag?' <span class="bd bdg" style="font-size:10px;margin-left:4px">'+p.tag+'</span>':'';
+    var amt=p.amount?' <span class="bd bdp" style="font-size:10px;margin-left:4px">'+p.amount+'</span>':'';
+    return '<div class="item'+(p.done?' done':'')+'"><input type="checkbox" id="pb'+i+'" '+(p.done?'checked':'')+' onchange="togPBO('+i+')"><label for="pb'+i+'">'+p.text+tag+amt+'</label><button class="del" onclick="delPBO('+i+')">×</button></div>';
   }).join('');
 }
-function togPBO(i){pboItems[i].done=!pboItems[i].done;sv('pbo_upnext_v1',pboItems);rPBO();}
-function delPBO(i){pboItems.splice(i,1);sv('pbo_upnext_v1',pboItems);rPBO();}
-function addPBO(){var t=($('pboIn').value||'').trim();if(!t)return;pboItems.push({text:t,tag:'',done:false});sv('pbo_upnext_v1',pboItems);$('pboIn').value='';rPBO();}
+function rPBO(){
+  pboSectionHtml('upnext','pbo-upnext');
+  pboSectionHtml('todo','pbo-todo');
+  pboSectionHtml('july','pbo-july');
+}
+function togPBO(i){pboTasks[i].done=!pboTasks[i].done;sv('pbo_tasks_v1',pboTasks);rPBO();}
+function delPBO(i){pboTasks.splice(i,1);sv('pbo_tasks_v1',pboTasks);rPBO();}
+function addPBO(){
+  var t=($('pboIn').value||'').trim();
+  if(!t)return;
+  var tag=($('pboTag').value||'').trim();
+  var amt=($('pboAmt').value||'').trim();
+  var sec=$('pboSec')?$('pboSec').value:'upnext';
+  pboTasks.push({text:t,tag:tag,amount:amt,section:sec,done:false});
+  sv('pbo_tasks_v1',pboTasks);
+  $('pboIn').value='';$('pboTag').value='';$('pboAmt').value='';
+  rPBO();
+}
 rPBO();
 
 // Credit & Financial Goals Action Items
