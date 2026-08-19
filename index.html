@@ -18,6 +18,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hdr .cd{font-size:12px;background:rgba(255,255,255,.15);border-radius:6px;padding:4px 10px;display:inline-block;margin-top:7px;font-weight:500;}
 .hdr .tr{display:flex;justify-content:space-between;align-items:flex-start;}
 .hdr .tm{font-size:20px;font-weight:700;}
+#globalSearch::placeholder{color:rgba(255,255,255,.7);}
+.srch-res{cursor:pointer;}
+.srch-res label{cursor:pointer;}
 .tabs{display:flex;overflow-x:auto;background:var(--sf);border-bottom:1px solid var(--bd);position:sticky;top:120px;z-index:99;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .tabs::-webkit-scrollbar{display:none;}
 .tab{flex-shrink:0;padding:10px 14px;font-size:13px;font-weight:500;color:var(--mu);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;}
@@ -198,6 +201,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="tm" id="tl"></div>
   </div>
   <div class="cd" id="cd"></div>
+  <div style="position:relative;margin-top:9px">
+    <input type="text" id="globalSearch" placeholder="🔍 Search everything…" oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')closeSearch()" autocomplete="off" style="width:100%;border:none;border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:rgba(255,255,255,.18);color:#fff;outline:none">
+    <div id="searchResults" style="display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.3);margin-top:6px;max-height:340px;overflow-y:auto;z-index:200;color:var(--tx);padding:4px 12px"></div>
+  </div>
 </div>
 
 <div class="tabs">
@@ -470,14 +477,17 @@ function $(i){return document.getElementById(i);}
 function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 function ld(k,d){try{var v=localStorage.getItem(k);return v!==null?JSON.parse(v):d;}catch(e){return d;}}
 
+// Month key for recurring bills (e.g. "2026-8") — used to auto-reset paid status each new month
+function monKey(d){d=d||new Date();return d.getFullYear()+'-'+(d.getMonth()+1);}
+
 // Today / Overdue strip — pulls together bills, priorities, home projects
 function rToday(){
   var el=$('todayList');
   if(!el)return;
-  var now=new Date(),todayStr=now.toISOString().split('T')[0],domToday=now.getDate();
+  var now=new Date(),todayStr=now.toISOString().split('T')[0],domToday=now.getDate(),mk=monKey(now);
   var rows=[];
   (typeof bills!=='undefined'?bills:[]).forEach(function(b){
-    if(b.paid)return;
+    if(b.paidMonth===mk)return;
     if(b.day<domToday)rows.push({label:b.name,type:'Bill',ov:true,when:'Day '+b.day});
     else if(b.day===domToday)rows.push({label:b.name,type:'Bill',ov:false,when:'Today'});
   });
@@ -513,6 +523,70 @@ function exportData(){
   document.body.appendChild(a);a.click();document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// ── GLOBAL SEARCH ────────────────────────────────────────────────────────────
+function closeSearch(){var p=$('searchResults');if(p){p.style.display='none';}}
+function doSearch(q){
+  q=(q||'').trim().toLowerCase();
+  var panel=$('searchResults');
+  if(!panel)return;
+  if(!q){closeSearch();return;}
+  var results=[];
+  function add(text,section,tab,subFn,subId){
+    if(text&&(''+text).toLowerCase().indexOf(q)>-1)results.push({text:text,section:section,tab:tab,subFn:subFn||'',subId:subId||''});
+  }
+  (typeof pris!=='undefined'?pris:[]).forEach(function(p){add(p.text,'Priority','home');});
+  (typeof hps!=='undefined'?hps:[]).forEach(function(h){add(h.name,'Home Project','home2');});
+  (typeof bills!=='undefined'?bills:[]).forEach(function(b){add(b.name,'Bill','fin');});
+  (typeof exps!=='undefined'?exps:[]).forEach(function(e){add(e.name,'Expense','fin');});
+  (typeof actions!=='undefined'?actions:[]).forEach(function(a){add(a.text,'Financial Goal','fin');});
+  (typeof pboItems!=='undefined'?pboItems:[]).forEach(function(p){add(p.text,'PBO Pride','pbo');});
+  (typeof groc!=='undefined'?groc:[]).forEach(function(g){add(g.text,'Grocery','lists','swl','groc');});
+  (typeof low!=='undefined'?low:[]).forEach(function(l){add(l.text,"Lowe's List",'lists','swl','low');});
+  (typeof rets!=='undefined'?rets:[]).forEach(function(r){add((r.store||'')+' — '+(r.item||''),'Return','lists','swl','ret');});
+  (typeof wlitems!=='undefined'?wlitems:[]).forEach(function(w){add(w.title||w.url,'Wish List Item','lists','swl','wsh');});
+  (typeof rchs!=='undefined'?rchs:[]).forEach(function(r){add(r.name+(r.reason?' — '+r.reason:''),'Reach Out','contacts','swc','rch');});
+  (typeof lnks!=='undefined'?lnks:[]).forEach(function(l){add((l.note||l.url),'Saved Link','contacts','swc','lnk');});
+  (typeof ecItems!=='undefined'?ecItems:[]).forEach(function(t){add(t,'Event Co. Idea','events');});
+  (typeof recipes!=='undefined'?recipes:[]).forEach(function(r){add(r.title,'Recipe','life','swlf','rec');});
+  if(typeof movData!=='undefined'&&movData.myList)movData.myList.forEach(function(m){add(m.title,'Movie','life','swlf','mov');});
+  if(typeof bkData!=='undefined'&&bkData.myList)bkData.myList.forEach(function(b){add(b.title,'Book','life','swlf','bks');});
+  (typeof quotes!=='undefined'?quotes:[]).forEach(function(q2){add(q2.text,'Quote','life','swlf','qts');});
+  (typeof locItems!=='undefined'?locItems:[]).forEach(function(l){add(l.title,'Local Reference','life','swlf','loc');});
+  (typeof dietEntries!=='undefined'?dietEntries:[]).forEach(function(d){add(d.food,'Diet Entry','diet');});
+
+  if(!results.length){panel.innerHTML='<div class="empty">No matches for "'+q+'"</div>';panel.style.display='block';return;}
+  panel.innerHTML=results.slice(0,40).map(function(r){
+    return '<div class="item srch-res" data-tab="'+r.tab+'" data-subfn="'+r.subFn+'" data-subid="'+r.subId+'"><span class="bd bdp" style="flex-shrink:0">'+r.section+'</span><label style="flex:1">'+r.text+'</label></div>';
+  }).join('');
+  panel.style.display='block';
+}
+(function initSearchDelegation(){
+  document.addEventListener('click',function(e){
+    var row=e.target.closest?e.target.closest('.srch-res'):null;
+    if(row){goToTab(row.getAttribute('data-tab'),row.getAttribute('data-subfn'),row.getAttribute('data-subid'));return;}
+    var wrap=e.target.closest?e.target.closest('#globalSearch,#searchResults'):null;
+    if(!wrap)closeSearch();
+  });
+})();
+function goToTab(mainId,subFn,subId){
+  closeSearch();
+  var si=$('globalSearch');if(si)si.value='';
+  var btn=document.querySelector('.tabs .tab[onclick*="sw(\''+mainId+'\'"]');
+  if(btn)sw(mainId,btn);
+  if(subFn&&subId){
+    setTimeout(function(){
+      var selMap={swl:'#lst-tabs .stab',swc:'#con-tabs .stab',swlf:'#life-tabs .stab'};
+      var sel=selMap[subFn];
+      if(sel){
+        var sbtn=document.querySelector(sel+'[onclick*="\''+subId+'\'"]');
+        if(sbtn&&window[subFn])window[subFn](subId,sbtn);
+      }
+    },0);
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 // Clock
 function tick(){
@@ -739,19 +813,29 @@ var BILLS_SEED={ts:1782432000000,items:[
 ]};
 (function seedBills(){var s=ld('bills_seed_ts',0);if(BILLS_SEED.ts>s){sv('bills_v2',BILLS_SEED.items);sv('bills_seed_ts',BILLS_SEED.ts);}})();
 var bills=ld('bills_v2',BILLS_SEED.items);
+// Migrate legacy paid:true/false bills to recurring paidMonth model (auto-resets each new month)
+(function migrateBillsRecurrence(){
+  var changed=false;
+  bills.forEach(function(b){
+    if(b.paidMonth===undefined){b.paidMonth=(b.paid===true)?monKey():null;changed=true;}
+  });
+  if(changed)sv('bills_v2',bills);
+})();
 function rbills(){
   var el=$('bll');
-  var up=bills.filter(function(b){return !b.paid;}),od=bills.filter(function(b){return !b.paid&&b.day<tod;}),pd=bills.filter(function(b){return b.paid;});
+  var mk=monKey();
+  var up=bills.filter(function(b){return b.paidMonth!==mk;}),od=bills.filter(function(b){return b.paidMonth!==mk&&b.day<tod;}),pd=bills.filter(function(b){return b.paidMonth===mk;});
   $('bdu').textContent=up.length;$('bod').textContent=od.length;$('bpd').textContent=pd.length;
   if(!bills.length){el.innerHTML='<div class="empty">Add your bills below.</div>';rToday();return;}
   el.innerHTML=bills.map(function(b,i){
-    var ov=!b.paid&&b.day<tod;
-    return '<div class="item'+(b.paid?' done':'')+'"><input type="checkbox" id="bl'+i+'" '+(b.paid?'checked':'')+' onchange="togBill('+i+')"><label for="bl'+i+'">'+b.name+'</label><span class="due'+(ov?' ov':'')+'">Due '+b.day+(ov?' ⚠️':'')+'</span><button class="del" onclick="delBill('+i+')">×</button></div>';
+    var paid=b.paidMonth===mk;
+    var ov=!paid&&b.day<tod;
+    return '<div class="item'+(paid?' done':'')+'"><input type="checkbox" id="bl'+i+'" '+(paid?'checked':'')+' onchange="togBill('+i+')"><label for="bl'+i+'">'+b.name+'</label><span class="due'+(ov?' ov':'')+'">Due '+b.day+(ov?' ⚠️':'')+'</span><button class="del" onclick="delBill('+i+')">×</button></div>';
   }).join('');
   rToday();
 }
-function addBill(){var n=$('bln').value.trim(),d=parseInt($('bld').value)||1;if(!n)return;bills.push({name:n,day:d,paid:false});sv('bills_v2',bills);$('bln').value='';$('bld').value='';rbills();}
-function togBill(i){bills[i].paid=!bills[i].paid;sv('bills_v2',bills);rbills();}
+function addBill(){var n=$('bln').value.trim(),d=parseInt($('bld').value)||1;if(!n)return;bills.push({name:n,day:d,paidMonth:null});sv('bills_v2',bills);$('bln').value='';$('bld').value='';rbills();}
+function togBill(i){var mk=monKey();bills[i].paidMonth=(bills[i].paidMonth===mk)?null:mk;sv('bills_v2',bills);rbills();}
 function delBill(i){bills.splice(i,1);sv('bills_v2',bills);rbills();}
 rbills();
 
