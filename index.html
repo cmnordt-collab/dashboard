@@ -7,6 +7,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Dashboard">
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#4c1d95">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png">
 <title>Carrie's Dashboard</title>
 <style>
 :root{--bg:#f5f3ef;--sf:#fff;--bd:#e6e1d8;--tx:#2b2724;--mu:#7a6f65;--pu:#7c3aed;--pdk:#6d28d9;--plt:#f0ebff;--go:#b45309;--glt:#fef3c7;--gn:#047857;--gnlt:#d1fae5;--rd:#b91c1c;--rlt:#fee2e2;--bl:#1d4ed8;--blt:#dbeafe;--or:#c2410c;--olt:#ffedd5;--r:12px;--sh:0 1px 4px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.05);}
@@ -1734,4 +1739,16 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="cb" id="dietMedList"></div>
   </div>
 </div>
+
+<script>
+// Registers the service worker so the dashboard can be installed to the home
+// screen and keep working offline. Safe no-op in browsers that don't support it.
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('./sw.js').catch(function(err){
+      console.warn('Service worker registration failed:',err);
+    });
+  });
+}
+</script>
 
