@@ -542,10 +542,15 @@ function rToday(){
   (typeof jobs!=='undefined'&&typeof needsFri==='function'?jobs:[]).forEach(function(j){
     if(needsFri(j))rows.push({label:(j.role||'Untitled')+(j.company?' — '+j.company:''),type:'Job',ov:true,when:'Apply by Friday'});
   });
+  (typeof reminders!=='undefined'&&typeof remStatus==='function'?reminders:[]).forEach(function(r){
+    var s=remStatus(r);
+    if(s.ov)rows.push({label:remIcon(r)+' '+r.name,type:'Reminder',ov:true,when:s.whenTxt});
+    else if(s.due)rows.push({label:remIcon(r)+' '+r.name,type:'Reminder',ov:false,when:'Today'});
+  });
   if(!rows.length){el.innerHTML='<div class="empty">Nothing due today or overdue — nice! 🎉</div>';return;}
   rows.sort(function(a,b){return (b.ov?1:0)-(a.ov?1:0);});
   el.innerHTML=rows.map(function(r){
-    var prefix=(r.ov&&r.type!=='Job')?'Overdue · ':'';
+    var prefix=(r.ov&&r.type!=='Job'&&r.type!=='Reminder')?'Overdue · ':'';
     return '<div class="item"><span class="bd '+(r.ov?'bdr':'bdb')+'" style="flex-shrink:0">'+r.type+'</span><label style="flex:1">'+r.label+'</label><span class="due'+(r.ov?' ov':'')+'">'+prefix+r.when+'</span></div>';
   }).join('');
 }
@@ -579,6 +584,7 @@ function doSearch(q){
   }
   (typeof pris!=='undefined'?pris:[]).forEach(function(p){add(p.text,'Priority','home');});
   (typeof jobs!=='undefined'?jobs:[]).forEach(function(j){add((j.role||'')+' — '+(j.company||''),'Job Search','jobs');});
+  (typeof reminders!=='undefined'?reminders:[]).forEach(function(r){add(r.name,'Reminder','diet');});
   (typeof hps!=='undefined'?hps:[]).forEach(function(h){add(h.name,'Home Project','home2');});
   (typeof bills!=='undefined'?bills:[]).forEach(function(b){add(b.name,'Bill','fin');});
   (typeof exps!=='undefined'?exps:[]).forEach(function(e){add(e.name,'Expense','fin');});
@@ -649,7 +655,7 @@ function sw(id,btn){
   btn.classList.add('active');
   $('p-'+id).classList.add('active');
   if(id==='life'){setTimeout(function(){rRcp();},0);}
-  if(id==='diet'){setTimeout(function(){rDiet();rMeds();},0);}
+  if(id==='diet'){setTimeout(function(){rDiet();rMeds();rReminders();},0);}
   if(id==='jobs'){setTimeout(function(){rjobs();},0);}
 }
 function swl(id,btn){
@@ -1570,6 +1576,122 @@ function rMeds(){
 }
 try{rMeds();}catch(e){}
 
+// ── RECURRING REMINDERS (anything on a repeating schedule — meds, pet care, errands, etc.) ──
+var REM_CAT_ICON={pet:'🐾',med:'💊',errand:'🧺',home:'🏠',other:'🔁'};
+var REM_WEEKDAY_NAMES=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var REM_SEED={ts:1782518400021,items:[
+  {id:'rem1',name:'Simparica Trio — dogs (flea/tick)',category:'pet',icon:'',notes:'Both dogs',scheduleType:'interval',lastGiven:'2026-06-20',intervalDays:30,weekday:1,dayOfMonth:1,doneWeek:'',doneMonth:'',doneDate:''}
+]};
+(function seedRem(){var s=ld('rem_seed_ts',0);if(REM_SEED.ts>s){sv('reminders_v1',REM_SEED.items);sv('rem_seed_ts',REM_SEED.ts);}})();
+var reminders=ld('reminders_v1',REM_SEED.items);
+// Migrate older reminders (saved before daily/monthly scheduling existed) to the new shape
+(function migrateReminders(){
+  var changed=false;
+  reminders.forEach(function(r){
+    if(!r.scheduleType){r.scheduleType='interval';changed=true;}
+    if(r.icon===undefined){r.icon='';changed=true;}
+    if(r.weekday===undefined){r.weekday=1;changed=true;}
+    if(r.dayOfMonth===undefined){r.dayOfMonth=1;changed=true;}
+    if(r.doneWeek===undefined){r.doneWeek='';changed=true;}
+    if(r.doneMonth===undefined){r.doneMonth='';changed=true;}
+    if(r.doneDate===undefined){r.doneDate='';changed=true;}
+  });
+  if(changed)sv('reminders_v1',reminders);
+})();
+function remIcon(r){return r.icon||REM_CAT_ICON[r.category]||'🔁';}
+// Monday-start week key (e.g. the Monday's date) so "this week" is unambiguous
+function remWeekKey(d){
+  d=new Date(d);var day=d.getDay(),diff=(day===0?-6:1-day);
+  var mon=new Date(d);mon.setDate(d.getDate()+diff);mon.setHours(0,0,0,0);
+  return mon.toISOString().split('T')[0];
+}
+function remMonFirst(jsDay){return jsDay===0?6:jsDay-1;} // convert JS Sun=0..Sat=6 to Mon=0..Sun=6
+function remStatus(r){
+  var today=new Date();today.setHours(0,0,0,0);
+  if(r.scheduleType==='daily'){
+    if(r.doneDate===todayDate())return {ov:false,due:false,whenTxt:'Done for today'};
+    return {ov:false,due:true,whenTxt:'Due today'};
+  }
+  if(r.scheduleType==='weekly'){
+    var curWeekKey=remWeekKey(today);
+    if(r.doneWeek===curWeekKey)return {ov:false,due:false,whenTxt:'Done for this week'};
+    var todayMF=remMonFirst(today.getDay()),schedMF=remMonFirst(r.weekday);
+    if(todayMF<schedMF)return {ov:false,due:false,whenTxt:'Due '+REM_WEEKDAY_NAMES[r.weekday]};
+    var diffDays=todayMF-schedMF;
+    if(diffDays===0)return {ov:false,due:true,whenTxt:'Due today'};
+    return {ov:true,due:false,whenTxt:diffDays+' day'+(diffDays===1?'':'s')+' overdue'};
+  }
+  if(r.scheduleType==='monthly'){
+    var curMonKey=monKey(today);
+    if(r.doneMonth===curMonKey)return {ov:false,due:false,whenTxt:'Done for this month'};
+    var domToday=today.getDate();
+    if(domToday<r.dayOfMonth)return {ov:false,due:false,whenTxt:'Due day '+r.dayOfMonth};
+    if(domToday===r.dayOfMonth)return {ov:false,due:true,whenTxt:'Due today'};
+    var diffD=domToday-r.dayOfMonth;
+    return {ov:true,due:false,whenTxt:diffD+' day'+(diffD===1?'':'s')+' overdue'};
+  }
+  var nd=new Date(new Date(r.lastGiven+'T00:00:00').getTime()+r.intervalDays*86400000);
+  var days=Math.round((nd-today)/86400000);
+  if(days<0)return {ov:true,due:false,whenTxt:Math.abs(days)+' day'+(Math.abs(days)===1?'':'s')+' overdue'};
+  if(days===0)return {ov:false,due:true,whenTxt:'Due today'};
+  return {ov:false,due:false,whenTxt:'Due in '+days+' day'+(days===1?'':'s')};
+}
+function remSchedNote(r){
+  if(r.scheduleType==='daily')return 'Daily';
+  if(r.scheduleType==='weekly')return 'Every '+REM_WEEKDAY_NAMES[r.weekday];
+  if(r.scheduleType==='monthly')return 'Monthly on day '+r.dayOfMonth;
+  return 'Every '+r.intervalDays+' days';
+}
+function rReminders(){
+  var el=$('remList');
+  if(!el)return;
+  if(!reminders.length){el.innerHTML='<div class="empty">No recurring reminders yet</div>';return;}
+  el.innerHTML=reminders.map(function(r,i){
+    var s=remStatus(r);
+    var badgeCl=s.ov?'bdr':s.due?'bdo':'bdx';
+    return '<div class="item"><span class="bd '+badgeCl+'" style="flex-shrink:0">'+remIcon(r)+' '+s.whenTxt+'</span><label style="flex:1">'+r.name+' <span style="color:var(--mu);font-size:12px">— '+remSchedNote(r)+'</span>'+(r.notes?'<br><span style="color:var(--mu);font-size:12px">'+r.notes+'</span>':'')+'</label><button class="ab" onclick="markGiven('+i+')">✓ Done</button><button class="del" onclick="delReminder('+i+')">×</button></div>';
+  }).join('');
+}
+function toggleRemSchedule(){
+  var t=$('remSchedType').value;
+  $('remIntervalFields').style.display=t==='interval'?'flex':'none';
+  $('remWeeklyFields').style.display=t==='weekly'?'flex':'none';
+  $('remMonthlyFields').style.display=t==='monthly'?'flex':'none';
+}
+function addReminder(){
+  var n=($('remName').value||'').trim();
+  if(!n)return;
+  var cat=$('remCat').value,icon=($('remIcon').value||'').trim(),notes='';
+  var schedType=$('remSchedType').value;
+  var item={id:'rem'+Date.now(),name:n,category:cat,icon:icon,notes:notes,scheduleType:schedType,lastGiven:todayDate(),intervalDays:30,weekday:1,dayOfMonth:1,doneWeek:'',doneMonth:'',doneDate:''};
+  if(schedType==='weekly'){
+    item.weekday=parseInt($('remWeekday').value);
+  } else if(schedType==='monthly'){
+    item.dayOfMonth=Math.min(31,Math.max(1,parseInt($('remDayOfMonth').value)||1));
+  } else if(schedType==='interval'){
+    item.lastGiven=$('remLast').value||todayDate();
+    item.intervalDays=parseInt($('remInt').value)||30;
+  }
+  reminders.push(item);
+  sv('reminders_v1',reminders);
+  $('remName').value='';$('remIcon').value='';$('remLast').value='';$('remInt').value='';$('remDayOfMonth').value='';
+  rReminders();
+  if(typeof rToday==='function')rToday();
+}
+function markGiven(i){
+  var r=reminders[i];
+  if(r.scheduleType==='daily')r.doneDate=todayDate();
+  else if(r.scheduleType==='weekly')r.doneWeek=remWeekKey(new Date());
+  else if(r.scheduleType==='monthly')r.doneMonth=monKey(new Date());
+  else r.lastGiven=todayDate();
+  sv('reminders_v1',reminders);
+  rReminders();
+  if(typeof rToday==='function')rToday();
+}
+function delReminder(i){reminders.splice(i,1);sv('reminders_v1',reminders);rReminders();if(typeof rToday==='function')rToday();}
+try{rReminders();}catch(e){}
+// ─────────────────────────────────────────────────────────────────────────────
+
 
 </script>
 
@@ -1737,6 +1859,35 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="card">
     <div class="ch">💊 Medication Reminders</div>
     <div class="cb" id="dietMedList"></div>
+  </div>
+  <div class="card">
+    <div class="ch">🔁 Recurring Reminders</div>
+    <div class="cb">
+      <div id="remList"></div>
+      <div class="ar" style="margin-top:8px;flex-wrap:wrap">
+        <input class="gw" type="text" id="remName" placeholder="What is it? (e.g. Pick up dry-cleaning)">
+      </div>
+      <div class="ar" style="margin-top:7px;flex-wrap:wrap">
+        <select id="remCat"><option value="pet">🐾 Pet</option><option value="med">💊 Medication</option><option value="errand">🧺 Errand</option><option value="home">🏠 Home</option><option value="other">🔁 Other</option></select>
+        <input type="text" id="remIcon" placeholder="Custom icon (optional, e.g. ☕)" style="width:170px;text-align:center">
+      </div>
+      <div class="ar" style="margin-top:7px;flex-wrap:wrap">
+        <select id="remSchedType" onchange="toggleRemSchedule()"><option value="daily">Daily</option><option value="weekly">Weekly, on a day</option><option value="monthly">Monthly, on a date</option><option value="interval" selected>Every N days</option></select>
+      </div>
+      <div class="ar" id="remIntervalFields" style="margin-top:7px;flex-wrap:wrap">
+        <label style="font-size:12px;color:var(--mu);display:flex;align-items:center;gap:6px">Last given<input type="date" id="remLast"></label>
+        <label style="font-size:12px;color:var(--mu);display:flex;align-items:center;gap:6px">Every<input type="number" id="remInt" min="1" placeholder="days" style="width:70px">days</label>
+      </div>
+      <div class="ar" id="remWeeklyFields" style="margin-top:7px;flex-wrap:wrap;display:none">
+        <label style="font-size:12px;color:var(--mu);display:flex;align-items:center;gap:6px">Every
+          <select id="remWeekday"><option value="0">Sunday</option><option value="1" selected>Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option></select>
+        </label>
+      </div>
+      <div class="ar" id="remMonthlyFields" style="margin-top:7px;flex-wrap:wrap;display:none">
+        <label style="font-size:12px;color:var(--mu);display:flex;align-items:center;gap:6px">Day of month<input type="number" id="remDayOfMonth" min="1" max="31" placeholder="1–31" style="width:70px"></label>
+      </div>
+      <div class="ar" style="margin-top:7px"><button class="sb fw" onclick="addReminder()">Add Reminder</button></div>
+    </div>
   </div>
 </div>
 
