@@ -209,6 +209,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="tabs">
   <button class="tab active" onclick="sw('home',this)">🏠 Home</button>
+  <button class="tab" onclick="sw('jobs',this)">💼 Jobs</button>
   <button class="tab" onclick="sw('lists',this)">📦 Lists</button>
   <button class="tab" onclick="sw('fin',this)">💰 Finance</button>
   <button class="tab" onclick="sw('life',this)">📚 Life</button>
@@ -227,6 +228,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <input type="text" id="capIn" placeholder="What just popped into your head?">
       <select id="capPr">
         <option value="gen">General</option>
+        <option value="lst">Lists</option>
+        <option value="job">Job Search</option>
         <option value="pbo">PBO Pride</option>
         <option value="ec">Event Co.</option>
         <option value="fin">Finance</option>
@@ -257,6 +260,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <button class="cap-btn" onclick="exportData()">⬇️ Download Backup (.json)</button>
       <div class="hint">Save this file somewhere safe — it's a full copy of everything in this dashboard.</div>
     </div>
+  </div>
+</div>
+
+<!-- JOBS -->
+<div class="panel" id="p-jobs">
+  <div class="card" id="cjobc" style="display:none"><div class="ch">📌 Captured — Job Search</div><div class="cb"><ul class="cl" id="cjobl"></ul></div></div>
+  <div class="card">
+    <div class="ch">➕ Add a Job</div>
+    <div class="cb">
+      <div class="ar" style="flex-wrap:wrap">
+        <input class="gw" type="text" id="jro" placeholder="Role / title">
+        <input class="gw" type="text" id="jco" placeholder="Company">
+      </div>
+      <div class="ar" style="margin-top:7px;flex-wrap:wrap">
+        <input class="gw" type="url" id="jur" placeholder="Posting URL (optional)">
+        <select id="jst"><option value="saved">📌 Saved</option><option value="applied">✉️ Applied</option><option value="responded">💬 Responded</option><option value="interview1">📅 Interview 1</option><option value="interview2">📅 Interview 2</option><option value="interview3">📅 Interview 3</option><option value="offer">🎉 Offer!</option></select>
+      </div>
+      <div class="ar" style="margin-top:7px"><button class="sb fw" onclick="addJob()">Add Job</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">📌 Saved — Apply Later</div>
+    <div class="cb" id="jsl"></div>
+  </div>
+  <div class="card">
+    <div class="ch">✉️ Active Applications</div>
+    <div class="cb" id="jal"></div>
+  </div>
+  <div class="card">
+    <div class="ch">🗄️ Archived</div>
+    <div class="cb" id="jarl"></div>
   </div>
 </div>
 
@@ -339,6 +373,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <!-- LISTS -->
 <div class="panel" id="p-lists">
+  <div class="card" id="clstc" style="display:none"><div class="ch">📌 Captured — Lists</div><div class="cb"><ul class="cl" id="clstl"></ul></div></div>
   <div class="stabs" id="lst-tabs">
     <button class="stab active" onclick="swl('ret',this)">📦 Returns</button>
     <button class="stab" onclick="swl('wsh',this)">✨ Wish Lists</button>
@@ -499,10 +534,14 @@ function rToday(){
     if(h.due<todayStr)rows.push({label:h.name,type:'Home Project',ov:true,when:h.due});
     else if(h.due===todayStr)rows.push({label:h.name,type:'Home Project',ov:false,when:'Today'});
   });
+  (typeof jobs!=='undefined'&&typeof needsFri==='function'?jobs:[]).forEach(function(j){
+    if(needsFri(j))rows.push({label:(j.role||'Untitled')+(j.company?' — '+j.company:''),type:'Job',ov:true,when:'Apply by Friday'});
+  });
   if(!rows.length){el.innerHTML='<div class="empty">Nothing due today or overdue — nice! 🎉</div>';return;}
   rows.sort(function(a,b){return (b.ov?1:0)-(a.ov?1:0);});
   el.innerHTML=rows.map(function(r){
-    return '<div class="item"><span class="bd '+(r.ov?'bdr':'bdb')+'" style="flex-shrink:0">'+r.type+'</span><label style="flex:1">'+r.label+'</label><span class="due'+(r.ov?' ov':'')+'">'+(r.ov?'Overdue · ':'')+r.when+'</span></div>';
+    var prefix=(r.ov&&r.type!=='Job')?'Overdue · ':'';
+    return '<div class="item"><span class="bd '+(r.ov?'bdr':'bdb')+'" style="flex-shrink:0">'+r.type+'</span><label style="flex:1">'+r.label+'</label><span class="due'+(r.ov?' ov':'')+'">'+prefix+r.when+'</span></div>';
   }).join('');
 }
 
@@ -534,6 +573,7 @@ function doSearch(q){
     if(text&&(''+text).toLowerCase().indexOf(q)>-1)results.push({text:text,section:section,tab:tab,subFn:subFn||'',subId:subId||''});
   }
   (typeof pris!=='undefined'?pris:[]).forEach(function(p){add(p.text,'Priority','home');});
+  (typeof jobs!=='undefined'?jobs:[]).forEach(function(j){add((j.role||'')+' — '+(j.company||''),'Job Search','jobs');});
   (typeof hps!=='undefined'?hps:[]).forEach(function(h){add(h.name,'Home Project','home2');});
   (typeof bills!=='undefined'?bills:[]).forEach(function(b){add(b.name,'Bill','fin');});
   (typeof exps!=='undefined'?exps:[]).forEach(function(e){add(e.name,'Expense','fin');});
@@ -605,6 +645,7 @@ function sw(id,btn){
   $('p-'+id).classList.add('active');
   if(id==='life'){setTimeout(function(){rRcp();},0);}
   if(id==='diet'){setTimeout(function(){rDiet();rMeds();},0);}
+  if(id==='jobs'){setTimeout(function(){rjobs();},0);}
 }
 function swl(id,btn){
   document.querySelectorAll('#lst-tabs .stab').forEach(function(b){b.classList.remove('active');});
@@ -657,14 +698,21 @@ function cap(){
 }
 $('capIn').addEventListener('keydown',function(e){if(e.key==='Enter')cap();});
 function delCap(proj,i){var a=lcap(proj);a.splice(i,1);scap(proj,a);racaps();}
+// Turns any URL inside captured text into a tappable link, leaving surrounding text as-is
+function linkifyText(text){
+  return (text||'').replace(/(https?:\/\/[^\s<]+)/g,function(url){
+    return '<a href="'+url+'" target="_blank" rel="noopener" style="color:var(--bl);text-decoration:none;word-break:break-all">🔗 '+url+'</a>';
+  });
+}
 function rcapl(proj,lid,wid){
   var arr=lcap(proj),list=$(lid);if(!list)return;
   if(wid){var w=$(wid);if(w)w.style.display=arr.length?'block':'none';}
-  list.innerHTML=arr.map(function(c,i){return '<li class="cli"><span class="ct">'+c.text+'</span><button class="del" onclick="delCap(\''+proj+'\','+i+')">×</button></li>';}).join('');
+  list.innerHTML=arr.map(function(c,i){return '<li class="cli"><span class="ct">'+linkifyText(c.text)+'</span><button class="del" onclick="delCap(\''+proj+'\','+i+')">×</button></li>';}).join('');
 }
 function racaps(){
   $('cgc').style.display=lcap('gen').length?'block':'none';
   rcapl('gen','cgl');
+  rcapl('lst','clstl','clstc');
   rcapl('pbo','cpbl','cpbc');
   rcapl('fin','cfinl','cfin');
   rcapl('him','chiml','chim');
@@ -985,12 +1033,12 @@ function jCard(j,i){
   return '<div class="jc"><div class="jt"><div><div class="jr">'+(j.role||'Untitled')+'</div>'+(j.company?'<div class="jco">'+j.company+'</div>':'')+(j.url?'<a class="jlk" href="'+j.url+'" target="_blank">🔗 View posting</a>':'')+'</div><button class="del" onclick="delJob('+i+')">×</button></div><div class="jm"><span class="bd '+s.cl+'">'+s.lb+'</span>'+(j.dateAdded?'<span class="bd bdx">'+j.dateAdded+'</span>':'')+(needsFri(j)?'<span class="wf">⚠️ Apply by Friday!</span>':'')+(shouldArch(j)?'<button class="ab" onclick="updJob('+i+',\'archived\')">Archive?</button>':'')+'</div><div style="margin-top:7px"><select class="msel" onchange="updJob('+i+',this.value)">'+jOpts(j.status)+'</select></div></div>';
 }
 function rjobs(){
-       if(!$('jsl'))return;
-
+  if(!$('jsl'))return;
   var sv2=jobs.filter(function(j){return j.status==='saved';}),ac=jobs.filter(function(j){return j.status!=='saved'&&j.status!=='archived';}),ar=jobs.filter(function(j){return j.status==='archived';});
   $('jsl').innerHTML=sv2.length?sv2.map(function(j){return jCard(j,jobs.indexOf(j));}).join(''):'<div class="empty">Drop job links here to apply later</div>';
   $('jal').innerHTML=ac.length?ac.map(function(j){return jCard(j,jobs.indexOf(j));}).join(''):'<div class="empty">No active applications yet</div>';
   $('jarl').innerHTML=ar.length?ar.map(function(j){return jCard(j,jobs.indexOf(j));}).join(''):'<div style="color:var(--mu);font-size:13px;padding:6px 0">Jobs with no response after 30 days appear here</div>';
+  if(typeof rToday==='function')rToday();
 }
 function addJob(){
   var r=$('jro').value.trim(),c=$('jco').value.trim(),u=$('jur').value.trim(),s=$('jst').value;
