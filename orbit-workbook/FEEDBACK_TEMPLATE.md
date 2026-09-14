@@ -1,10 +1,9 @@
-# Help Me Name This (And Tell Me If It's Actually Useful)
+Help with this project
 
 From Carrie
 
-Hi sisters,
 
-I'm building something for people like us—people with ADHD brains who lose things, get paralyzed by long task lists, work irregular hours, and need capture methods that work with real life (voice, handwriting, phone, paper, whatever).
+I'm building an ADHD dashboard like the one I made for myself that helps with problems like getting paralyzed by long task lists, working irregular hours, and needing capture methods that work with real life (voice, handwriting, phone, paper, whatever).
 
 It's a hybrid physical + digital system: a working journal where you design your personal operating system once, then use it however you need.
 
@@ -66,7 +65,7 @@ The whole thing is hybrid by design. You design it once on paper, then use it ho
 - Space to sketch, doodle, write notes
 - Actual place to handwrite things if that's easier
 
-Why this matters: You're not locked into typing. If you want to voice-note your task while driving, it goes in the same system. If you want to handwrite a list on a bad ADHD day, that works too. The system doesn't care how you capture—just that you do.
+Why this matters: You're not locked into typing. If you want to voice-note your task while driving, it goes in the same system. If you want to handwrite a list if you think better on paper, that works too. The system doesn't care how you capture, just that you do.
 
 ---
 
