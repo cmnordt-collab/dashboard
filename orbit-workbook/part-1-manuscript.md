@@ -3,6 +3,88 @@
 
 ---
 
+## FOUNDATION SECTION
+
+### Before You Start
+
+**How to Use This Workbook**
+
+This workbook is a working journal, not a textbook. You're going to sketch, write, cross things out, change your mind, and come back to pages weeks later with new ideas. That's exactly what it's for.
+
+You can move through this at whatever pace makes sense:
+
+**Quick skim (8 minutes):** Flip through, read the headlines and the left pages, get a sense of the whole thing. You're looking for the shape of it, not absorbing everything.
+
+**Standard read (45 minutes):** Left page, then right page. You'll engage with prompts, sketch a little, start to see your system come together.
+
+**Deep work (2 hours):** Take your time. Reread sections. Do the sketches. Write long answers to the prompts. Sit with the ideas. Come back the next day with fresh thoughts and revise.
+
+None of these is the "right" pace. Different days will feel different. On a day when your brain is firing, you might do deep work. On a day when you're exhausted, you might just read the left pages and move on. Both are fine.
+
+---
+
+### What You'll Have When You're Done
+
+At the end of this workbook, you will have designed your own personal operating system. Not someone else's system that you're trying to fit yourself into. Yours.
+
+You'll know:
+- What parts of your life matter enough to track
+- How you want to capture things (typing, handwriting, voice, photos, whatever)
+- What your system looks like when it's working
+- How to use it on your phone, on paper, or by voice
+- What you're actually struggling with and why
+- What's not a personal failing, it's a design problem
+
+You'll also have something to refer back to on days when you can't remember your own system because your brain isn't cooperating. It will be written down. On paper. In your own words.
+
+---
+
+### How This Workbook Is Structured
+
+**Left pages teach.** They explain a concept, show an example, give you context. Read these for understanding.
+
+**Right pages are for you.** Prompts, sketching space, lines for writing, checkboxes, blank areas where you design your version. These pages are where your system actually gets built.
+
+**You're not following instructions.** You're answering the question: What does this look like for me?
+
+---
+
+### The Seven Elements You're About to Design
+
+This system is built on seven core pieces. You don't have to use all of them. You only design the ones that matter to you.
+
+**TABS** — Separate life domains (Work, Finance, Home, Health, Goals, whatever). You pick what matters.
+
+**QUICK CAPTURE** — A zero-friction bucket where you dump things without deciding where they go yet. Typing, handwriting, voice, whatever's easiest right now.
+
+**DUE DATES** — Seeing your deadlines at a glance instead of being blindsided.
+
+**RECURRING REMINDERS** — Things that repeat (medication, pay rent, laundry) reset automatically. No shame, no streaks.
+
+**STATUS BADGES** — Visual emoji or icons so you scan instead of read. Red, yellow, green. Done, waiting, blocked.
+
+**URGENCY FILTERING** — Knowing what you can actually do right now (meetings are locked to specific times, emails can happen anytime, some tasks are waiting on other people).
+
+**VISUAL CUSTOMIZATION** — Making it look like you. Your colors, your density, your vibe. Not a corporate template.
+
+These seven pieces fit together. They're not independent systems. They're one design.
+
+---
+
+### One More Thing Before You Start
+
+**You tried to learn their systems. They didn't work because they expected you to learn them. They were built for a generic person who doesn't exist.**
+
+This workbook is different. You're not going to learn Tabbi. Tabbi learns you. You tell it what matters, how you work, what's realistic for you on a bad day. The system builds around that.
+
+**There's no wrong way to do this.**
+
+If you only use two tabs instead of five, that's fine. If you never open the app and only use the paper version, that's fine. If you capture everything by voice and never type a single thing, that's fine. If you fill out the prompts in two minutes with bullet points instead of paragraphs, that's fine.
+
+Your way of building this is not a test you can fail. It's your work. How you do it is part of the system itself.
+
+---
+
 ## SPREADS 1-2: PHILOSOPHY + WHY IT WORKS
 
 ### SPREAD 1 (LEFT PAGE): Philosophy
