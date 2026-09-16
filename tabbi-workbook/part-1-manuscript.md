@@ -15,11 +15,29 @@ You can move through this at whatever pace makes sense:
 
 **Quick skim (8 minutes):** Flip through, read the headlines and the left pages, get a sense of the whole thing. You're looking for the shape of it, not absorbing everything.
 
-**Standard read (45 minutes):** Left page, then right page. You'll engage with prompts, sketch a little, start to see your system come together.
+**Workout (45 minutes):** Left page, then right page. You'll engage with prompts, sketch a little, start to see your system come together.
 
-**Deep work (2 hours):** Take your time. Reread sections. Do the sketches. Write long answers to the prompts. Sit with the ideas. Come back the next day with fresh thoughts and revise.
+None of these is the "right" pace. Different days will feel different. On a day when your brain is firing, you might do a full workout plus loop back. On a day when you're exhausted, you might just skim. Both are fine.
 
-None of these is the "right" pace. Different days will feel different. On a day when your brain is firing, you might do deep work. On a day when you're exhausted, you might just read the left pages and move on. Both are fine.
+---
+
+### Why Physical + Digital Together Matters
+
+The workbook is visual and tactile. That's not decoration. Your brain actually engages differently with pen on paper, with the texture of cream stock, with the emoji and layout you chose. This is the same reason bullet journaling stuck for some people: the act of moving a pen, seeing your own handwriting, the aesthetic of it pulled you back in even when the productivity system itself didn't work.
+
+The visual and tactile here are dopamine mining. They're part of the system, not separate from it. You're more likely to open something beautiful that feels like yours. You're more likely to stay engaged when capturing things feels good, not like friction.
+
+The digital version handles speed and sync. The physical version handles resilience and engagement.
+
+---
+
+### About Making Choices
+
+You're about to pick colors, emoji density, whether you want text or visual, how many tabs, what your capture methods are. That sounds like a lot of decisions.
+
+Here's the thing: you're not trying every option and optimizing. You're picking one that sounds good, and if it stops working three weeks later, you change it. That's it. The system learns you through adjusting, not through perfect initial setup.
+
+If you're paralyzed by options, just go with whatever feels most appealing in the moment. The workbook will assign defaults that work, and you'll adjust as you use it.
 
 ---
 
@@ -36,6 +54,8 @@ You'll know:
 - What's not a personal failing, it's a design problem
 
 You'll also have something to refer back to on days when you can't remember your own system because your brain isn't cooperating. It will be written down. On paper. In your own words.
+
+And in your digital system, you'll have a button that says "HELP! I'm in shutdown mode. Get me rolling." because sometimes you need a task to start you, not another decision. The system knows that and works around it.
 
 ---
 
@@ -108,6 +128,8 @@ The problem isn't that you're broken. The problem is that none of these tools ma
 - One place means less cognitive load. You don't have to remember that your budget is in Sheets and your tasks are in Notes and your calendar is somewhere else. Everything you care about lives in the same design. Same tabs. Same structure. Same flow.
 
 - It works the way you work, not the way someone decided you should work. You design it. You choose what matters. You choose which life areas get their own tab and which ones don't. You choose whether you like emoji or color or text or all three. You choose whether you capture things by typing, handwriting, voice, or taking a photo. There is no "right way" that you're failing at.
+
+  The aesthetic matters. Not as decoration, but because you're more likely to use something that's actually appealing to look at and interact with. If neon colors make you want to open it, neon colors. If minimal black and white keeps you focused, minimal black and white. The visual and tactile are part of the dopamine mining that keeps you coming back.
 
 - It doesn't require perfect consistency. You don't need to open it every single day. You don't need a streak. You don't need to maintain a ritual. Some days you use it constantly. Some days you don't look at it. Some weeks you add things to the capture bucket and don't look at them for two weeks. That's fine. It's still there when you come back.
 
