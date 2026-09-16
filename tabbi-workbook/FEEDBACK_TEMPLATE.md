@@ -11,8 +11,6 @@ It's a hybrid physical + digital system: a working journal where you design your
 
 ## What You're Looking At
 
-<img src="https://raw.githubusercontent.com/cmnordt-collab/dashboard/main/tabbi-workbook/graphic-1-spread-mockup.svg" alt="Workbook Spread Mockup">
-
 This is what the actual workbook pages look like. Left page teaches a concept with examples. Right page has prompts, checkboxes, and space for you to design your version.
 
 ---
@@ -34,8 +32,6 @@ The philosophy: Stop fighting your brain. Design a system that works WITH how AD
 
 ## The 7 Core Pieces
 
-<img src="https://raw.githubusercontent.com/cmnordt-collab/dashboard/main/tabbi-workbook/graphic-2-seven-elements.svg" alt="The 7 Core Elements">
-
 1. **Tabs** — Organize your life into separate areas (Work, Finance, Home, Health, etc.)
 2. **Quick Capture buckets** — Dump ideas/tasks/notes anywhere without deciding where they go (typing, voice, handwriting, screenshots—whatever's easiest right now)
 3. **Due dates** — See your deadlines at a glance
@@ -47,8 +43,6 @@ The philosophy: Stop fighting your brain. Design a system that works WITH how AD
 ---
 
 ## How It Works: Physical + Digital
-
-<img src="https://raw.githubusercontent.com/cmnordt-collab/dashboard/main/tabbi-workbook/graphic-3-hybrid-model.svg" alt="Hybrid Model">
 
 The whole thing is hybrid by design. You design it once on paper, then use it however makes sense that day.
 
@@ -73,18 +67,11 @@ Why this matters: You're not locked into typing. If you want to voice-note your 
 
 Pick one or two sections below and give me your gut reaction. No sugar-coating.
 
-### 1. NAMING (Pick ONE honest reaction)
+### 1. NAMING
 
-Which name resonates with you?
+We went with **Tabbi** — it has personality, it's memorable, and it sounds like something real people would actually use.
 
-- [ ] **Orbit** — Systems/gravity metaphor, celestial vibe, feels less "productivity app"
-- [ ] **Buckets** — Direct, friendly, captures the "brain dump" feeling perfectly
-- [ ] **Tabs** — Most literal (it's tab-based), but maybe too technical or tied to web browsers?
-- [ ] **Too Many Tabs** — Self-aware joke, very ADHD energy, might be too jokey
-- [ ] **LifeOS** — Clear what it is, but reads corporate
-- [ ] **Other idea:** ___________________________________
-
-**Which one makes you want to use it? Which one would you tell a friend about?**
+Does it land for you?
 
 ---
 
