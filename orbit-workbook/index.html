@@ -173,6 +173,17 @@
             background: #d3d1c7;
         }
         
+        .btn-copy {
+            background: #22C55E;
+            color: white;
+            font-size: 13px;
+            padding: 10px 16px;
+        }
+        
+        .btn-copy:hover {
+            background: #16a34a;
+        }
+        
         .success-message {
             display: none;
             background: #e8f5e9;
@@ -411,7 +422,8 @@
         
         <form id="feedbackForm">
             <div class="success-message" id="successMessage">
-                ✓ Feedback submitted! Thanks for this.
+                <div>✓ Feedback submitted! Thanks for this.</div>
+                <button type="button" class="btn-copy" id="copyBtn" style="margin-top: 12px;">Copy All Answers</button>
             </div>
             
             <!-- Question 1: Naming -->
@@ -539,6 +551,8 @@
     <script>
         const form = document.getElementById('feedbackForm');
         const successMessage = document.getElementById('successMessage');
+        const copyBtn = document.getElementById('copyBtn');
+        let lastSubmittedData = null;
         
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -550,6 +564,8 @@
                 feedback: Object.fromEntries(formData)
             };
             
+            lastSubmittedData = data;
+            
             // Store in localStorage
             let feedbackList = JSON.parse(localStorage.getItem('orbitFeedback')) || [];
             feedbackList.push(data);
@@ -560,12 +576,30 @@
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        copyBtn.addEventListener('click', function() {
+            if (!lastSubmittedData) return;
             
-            // Reset form
-            setTimeout(() => {
-                form.reset();
-                successMessage.style.display = 'none';
-            }, 3000);
+            // Format data as readable text
+            let text = 'TABBI FEEDBACK SUBMISSION\n';
+            text += '========================\n\n';
+            text += 'Submitted: ' + new Date(lastSubmittedData.timestamp).toLocaleString() + '\n\n';
+            
+            const feedback = lastSubmittedData.feedback;
+            for (const [key, value] of Object.entries(feedback)) {
+                const label = key.replace(/_/g, ' ').toUpperCase();
+                text += label + ': ' + value + '\n\n';
+            }
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(text).then(() => {
+                const oldText = copyBtn.textContent;
+                copyBtn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    copyBtn.textContent = oldText;
+                }, 2000);
+            });
         });
     </script>
 </body>
