@@ -105,6 +105,8 @@ Your way of building this is not a test you can fail. It's your work. How you do
 
 ---
 
+---
+
 ## SPREADS 1-2: PHILOSOPHY + WHY IT WORKS
 
 ### SPREAD 1 (LEFT PAGE): Philosophy
@@ -182,4 +184,73 @@ The problem isn't that you're broken. The problem is that none of these tools ma
 **Bottom of page:** Small note in sidebar:
 
 "There's no 'should' here. If you only use two tabs, that's fine. If you only check this once a week, that's fine. If you capture everything by voice note and never look at the app, that's fine. Design for how you actually work, not how you think you should work."
+
+
+---
+
+## SPREADS 3-4: PHYSICAL + DIGITAL DESIGN
+
+### SPREAD 3 (LEFT PAGE): How This Actually Works
+
+**Headline:** Your Brain Doesn't Trust Storage. So You're Building Two Systems That Talk to Each Other.
+
+**Body text:**
+
+Here's a hard fact: you're not going to remember everything in an app. And you're not going to update a paper system daily forever. So stop trying to pick one.
+
+The workbook and the digital dashboard are the same system. Same tabs, same structure, same design. But they work differently because your brain works differently on different days.
+
+**The paper version is your resilience backup.** Phone dies. You have a breakdown and can't look at screens. Your energy is at zero and opening an app feels like climbing a mountain. You flip open the workbook and there's your system. On paper. In your handwriting. It's still there.
+
+The digital version is your speed system. Quick capture, instant syncing, reminders that ping you at 2pm, searchable everything. It's the tool you reach for when your brain is running fast and you need to get thoughts out before they disappear.
+
+Here's where they connect: you're not maintaining both.
+
+You design your system once in this workbook. Then you use whichever version makes sense that moment. On a clear-head day, you might type everything into the app. On a bad day, you might just open the paper version and know what matters. You might voice-note something on your way somewhere and type it into the app later. Or you might scan a QR code on a workbook page and enter it directly.
+
+The QR codes on each page of this workbook are bridges. They're not meant to be automatic (that's complexity you don't need). They're meant to be optional. Some days you'll use them. Some days you won't. The system doesn't care.
+
+**Why this matters:**
+
+Your brain's job is having ideas, not storing them. Once something is written down—whether that's on paper or in the app or both—it's out of your head. You can stop holding it. This is the externalization that actually works.
+
+You don't have to pick one tool and commit to it forever. You don't have to maintain perfect sync between paper and digital. You just have to get the thing out of your brain the second it exists. Write it down, voice-note it, photograph it, type it. Whichever is easiest right then.
+
+Then later, when you have the energy, move it to the app (or don't). But the system isn't punishing you for that lag time. The system is just glad you didn't lose the thought in the first place.
+
+---
+
+### SPREAD 4 (RIGHT PAGE): Your Capture System
+
+**Header:** "How Do You Actually Capture Things?"
+
+**Prompts:**
+
+1. Right now, today, if you think of something important, what's the easiest way to get it out of your head?
+   - [ ] Type it on phone
+   - [ ] Voice note
+   - [ ] Handwrite it
+   - [ ] Take a photo
+   - [ ] Text yourself
+   - [ ] Other: _______________
+
+[Blank space for writing]
+
+2. On a bad brain day (tired, overwhelmed, depressed, can't focus, whatever that looks like for you), what can you actually do? What's the absolute minimum friction?
+
+[Blank space for writing]
+
+3. When you look at your paper workbook, does that help you remember your system? Or does it make you feel like you're failing?
+
+[Blank space for writing]
+
+4. Design your version: which capture methods will you actually use? Don't list everything. Just pick the ones that feel realistic.
+
+[Blank space for sketching or writing]
+
+---
+
+**Bottom sidebar note:**
+
+"The digital system has a "HELP! I'm in shutdown mode" button. It shows you one small task to start with. No choices, no decisions. Just a way back in. Your paper system is always readable, even when you can't think. Neither one judges you for how long it takes to get something into the digital version. The system learning you is the whole point."
 
