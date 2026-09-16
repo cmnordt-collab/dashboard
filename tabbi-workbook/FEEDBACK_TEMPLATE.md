@@ -11,7 +11,7 @@ It's a hybrid physical + digital system: a working journal where you design your
 
 ## What You're Looking At
 
-![Workbook Spread Mockup](../graphic-1-spread-mockup.svg)
+![Workbook Spread Mockup](graphic-1-spread-mockup.svg)
 
 This is what the actual workbook pages look like. Left page teaches a concept with examples. Right page has prompts, checkboxes, and space for you to design your version.
 
@@ -34,7 +34,7 @@ The philosophy: Stop fighting your brain. Design a system that works WITH how AD
 
 ## The 7 Core Pieces
 
-![The 7 Core Elements](../graphic-2-seven-elements.svg)
+![The 7 Core Elements](graphic-2-seven-elements.svg)
 
 1. **Tabs** — Organize your life into separate areas (Work, Finance, Home, Health, etc.)
 2. **Quick Capture buckets** — Dump ideas/tasks/notes anywhere without deciding where they go (typing, voice, handwriting, screenshots—whatever's easiest right now)
@@ -48,7 +48,7 @@ The philosophy: Stop fighting your brain. Design a system that works WITH how AD
 
 ## How It Works: Physical + Digital
 
-![Hybrid Model](../graphic-3-hybrid-model.svg)
+![Hybrid Model](graphic-3-hybrid-model.svg)
 
 The whole thing is hybrid by design. You design it once on paper, then use it however makes sense that day.
 
