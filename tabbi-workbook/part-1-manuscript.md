@@ -204,7 +204,7 @@ Here's a hard fact: you're not going to remember everything in an app. And you'r
 
 The workbook and the digital dashboard are the same system. Same tabs, same structure, same design. But they work differently because your brain works differently on different days.
 
-**The paper version is your resilience backup.** Phone dies. You have a breakdown and can't look at screens. Your energy is at zero and opening an app feels like climbing a mountain. You flip open the workbook and there's your system. On paper. In your handwriting. It's still there.
+**The paper version is your resilience backup.** Phone dies. You are shutting down and can't look at screens. Your energy is at zero and opening an app feels like climbing a mountain. You flip open the workbook and there's your system. On paper. In your handwriting. It's still there.
 
 The digital version is your speed system. Quick capture, instant syncing, reminders that ping you at 2pm, searchable everything. It's the tool you reach for when your brain is running fast and you need to get thoughts out before they disappear.
 
