@@ -748,3 +748,139 @@ Email doesn't need focus. Deep design work does. Know the difference.
 
 This is the system knowing how your day actually works.
 
+
+---
+
+## SPREADS 21-22: ELEMENT 7 - VISUAL CUSTOMIZATION
+
+### SPREAD 21 (LEFT PAGE): If You Hate How It Looks, You Won't Open It
+
+Aesthetics aren't extra.
+
+This is not decoration. This is dopamine. This is the reason you'll actually open the system instead of letting it sit in a tab you never visit.
+
+You can have the most functional system in the world. If it looks like a tax form, you're not opening it. If it looks like something you hate looking at, you won't use it, no matter how good it is.
+
+Visual customization is the difference between a system you build once and then never touch again, and a system you actually live in.
+
+Choices: Do you want minimal and clean, or chaotic and colorful? Do you want emoji everywhere or text-heavy? Do you want serif fonts or sans-serif? Do you want every element clickable or some things just visual?
+
+There's no "right" aesthetic. There's just "does this make you want to open it?"
+
+Katie wants clean and minimal with strategic pops of color. Someone else wants emoji-heavy chaos. Someone else wants it to look like a notebook they'd doodle in. All of those are valid. All of those keep people engaged.
+
+And here's the real thing: you can change it whenever you want. Three weeks in, if you realize "actually, I hate this color," you change it. Your visual system isn't failing. You're just learning what actually works for you.
+
+The system learning you is the whole point.
+
+---
+
+### SPREAD 22 (RIGHT PAGE): Design Your Look
+
+What makes you want to open something?
+
+**1. Minimal and clean, or colorful and chaotic?**
+
+Or somewhere in between?
+
+[Blank space for writing]
+
+**2. Emoji heavy, text-heavy, or balanced?**
+
+How much visual representation do you want?
+
+[Blank space]
+
+**3. What colors make you want to open something?**
+
+Not "what colors are professional." What colors actually appeal to you?
+
+Sketch your color palette:
+
+[Blank space for sketching]
+
+**4. Font preference?**
+
+Serif? Sans-serif? Something playful? What makes you happy to look at?
+
+[Blank space]
+
+**5. Is there anything visual that would make you LESS likely to use this?**
+
+Anything that feels triggering or just wrong?
+
+[Blank space]
+
+You're not designing for anyone else. You're designing for the person who's actually going to use this: you.
+
+
+---
+
+## SPREADS 23-24: ASSEMBLY & NEXT STEPS
+
+### SPREAD 23 (LEFT PAGE): You Just Designed Your Personal Operating System
+
+You picked your tabs. You decided how to capture. You mapped your deadlines and set lead times. You named the things that repeat. You designed your visual priority system. You figured out when you actually have time. You made it look like something you want to use.
+
+You didn't inherit this system. You didn't try to learn someone else's. You didn't apologize for the way you work or force yourself to fit a mold that was built for someone who doesn't exist.
+
+You designed around who you are.
+
+This is your system. And here's what's really important: none of it is permanent.
+
+In three weeks, one of your tabs doesn't work anymore. Delete it. Add a new one.
+
+In two months, you realize you need a fourth recurring reminder. Add it.
+
+In six months, you hate the colors. Change them. The system doesn't care. It's learning you.
+
+You didn't fail if something doesn't stick. The setup was the test. You're adjusting. That's what it looks like to build around how you actually work instead of forcing yourself to be different.
+
+The system failing means the system wasn't right yet. It doesn't mean you were failing.
+
+---
+
+### SPREAD 24 (RIGHT PAGE): Before You Close This Book
+
+Write down what you just built.
+
+**1. The three most important things you designed:**
+
+- _______________
+- _______________
+- _______________
+
+**2. What are you most excited about trying?**
+
+[Blank space]
+
+**3. What are you most worried won't work?**
+
+[Blank space]
+
+**4. When will you actually start using this?**
+
+Not "when should you." When will you?
+
+[Blank space]
+
+**5. How will you know it's working?**
+
+What changes do you want to see?
+
+[Blank space]
+
+---
+
+**Closing (sidebar, full page bleed):**
+
+You don't have to be different to use this system. You don't have to become someone else. You don't have to learn their way of working or adopt their habits or apologize for the way you think.
+
+You have to stop punishing yourself for being who you are.
+
+That's the whole thing.
+
+Your system knows you now.
+
+Go design.
+
