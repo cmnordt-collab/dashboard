@@ -516,3 +516,132 @@ How far in advance would you have needed notice to actually prepare?
 
 Your lead time is not laziness. It's knowing yourself.
 
+
+---
+
+## SPREADS 13-14: ELEMENT 4 - RECURRING REMINDERS
+
+### SPREAD 13 (LEFT PAGE): No Streaks. No Shame. Just Reset.
+
+Some things happen over and over: take your medication, pay rent, water the thing you're keeping alive, call the person you love but keep forgetting about, back up your computer before it explodes.
+
+The problem is remembering to do them. Not "I forgot" but "I remembered last week and the week before and today I just didn't think about it."
+
+Recurring Reminders reset themselves. You complete it. It vanishes. It comes back next week or next month or tomorrow. You never have to remember to remember.
+
+No streak counter. No guilt if you miss one. No "I was doing so good" shame spiral. You did it or you didn't, and either way, it resets. The system doesn't judge. It just reminds you again.
+
+And here's the real thing: you're not using this to build a habit. You're not trying to change yourself. You're just trying to not forget things that matter. Your medication doesn't care if you have a "streak." It just cares if you took it. The system is the same way.
+
+You can give each recurring thing an emoji or icon. Something visual so when you scan your list, you don't have to read. Just see 💊 and know it's time for medicine. See 🪴 and know it's plant water day.
+
+Frequency is up to you. Daily, weekly, monthly, "every other Thursday." And you can change it whenever you want. Three months from now if you realize "actually, twice a week makes way more sense," you change it. The system learns you.
+
+---
+
+### SPREAD 14 (RIGHT PAGE): Your Recurring Things
+
+What repeats in your life?
+
+**1. What repeats in your life?**
+
+Medication, bills, chores, self-care, social stuff, car maintenance, house maintenance, checking on people you care about, work routines, anything that happens more than once.
+
+[Blank space for brainstorming]
+
+**2. Which of those would you actually want a reminder for?**
+
+Not all of them. Just the ones that actually help.
+
+[Blank space]
+
+**3. For each one, what's the frequency?**
+
+- _____________ : [ ] Daily [ ] Weekly [ ] Monthly [ ] Other: _____
+- _____________ : [ ] Daily [ ] Weekly [ ] Monthly [ ] Other: _____
+- _____________ : [ ] Daily [ ] Weekly [ ] Monthly [ ] Other: _____
+- _____________ : [ ] Daily [ ] Weekly [ ] Monthly [ ] Other: _____
+
+**4. Pick a visual for each one.**
+
+Emoji, icon, symbol, whatever makes sense to you and makes you smile.
+
+- _____________ : ___
+- _____________ : ___
+- _____________ : ___
+
+**5. Honest question: Is there something you keep forgetting that you'd love to NOT forget?**
+
+Not something you should remember. Something you'd actually feel better if it happened.
+
+[Blank space for writing]
+
+This is your "I have to do this" list, except the system does the "remember" part.
+
+
+---
+
+## SPREADS 15-16: ELEMENT 5 - STATUS BADGES
+
+### SPREAD 15 (LEFT PAGE): Red, Yellow, Green. That's It.
+
+Status Badges are the visual language that lets you scan instead of read.
+
+When your brain is full, reading is expensive. Your eyes can land on a color or an icon and your brain knows what it means without your conscious mind having to parse words.
+
+Red means urgent. Or overdue. Or "deal with this." Whatever makes sense to you.
+
+Yellow means coming up. Or next. Or "keep an eye on this."
+
+Green means handled. Or done. Or "you can breathe."
+
+Or use emoji instead. 🔴 and 🟡 and 🟢. Or 🚨 and ⏰ and ✓. Or combinations. Whatever your brain recognizes as meaning.
+
+The point is: you look at your list and your eyes go right to what needs attention. You don't have to read labels. You don't have to think. Visual processing is faster than language processing when your brain is already full.
+
+If three statuses aren't enough, add a fourth. Some people use Blocked (waiting for someone else). Some use Someday (interesting but not urgent). You decide.
+
+The system doesn't care what the colors mean. Your brain does. Make them mean what you actually need.
+
+---
+
+### SPREAD 16 (RIGHT PAGE): Design Your Status System
+
+How do you want to show priority?
+
+**1. How do you want to show it visually?**
+
+Colors? Emoji? Shapes? Words? A combination?
+
+Sketch or describe:
+
+[Blank space for sketching]
+
+**2. What does RED/URGENT/OVERDUE look like to you?**
+
+What visual makes you think "this needs attention right now"?
+
+[Blank space for writing]
+
+**3. What does YELLOW/COMING UP look like?**
+
+What visual means "this is next"?
+
+[Blank space]
+
+**4. What does GREEN/HANDLED look like?**
+
+What visual means "you can breathe about this"?
+
+[Blank space]
+
+**5. Do you need a fourth status?**
+
+Blocked? Waiting? Someday? Something else?
+
+What would you call it? How would it look?
+
+[Blank space]
+
+Your status system is a language. Make it one your brain actually speaks.
+
