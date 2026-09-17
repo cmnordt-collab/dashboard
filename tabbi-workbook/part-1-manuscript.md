@@ -9,7 +9,7 @@
 
 **How to Use This Workbook**
 
-This workbook is a workbook + journal, not a textbook. You're going to sketch, write, cross things out, change your mind, and come back to pages weeks later with new ideas. That's exactly what it's for.
+This workbook is a workbook and journal, not a textbook. You're going to sketch, write, cross things out, change your mind, and come back to pages weeks later with new ideas. That's exactly what it's for.
 
 You can move through this at whatever pace makes sense:
 
@@ -77,19 +77,19 @@ And in your digital system, you'll have a button that says "HELP! I'm in shutdow
 
 This system is built on seven core pieces. You don't have to use all of them. You only design the ones that matter to you.
 
-**TABS** — Separate life domains (Work, Finance, Home, Health, Goals, whatever). You pick what matters.
+**TABS** organize separate life domains (Work, Finance, Home, Health, Goals, whatever). You pick what matters.
 
-**QUICK CAPTURE** — A zero-friction bucket where you dump things without deciding where they go yet. Typing, handwriting, voice, whatever's easiest right now.
+**QUICK CAPTURE** gives you a zero-friction bucket where you dump things without deciding where they go yet. Typing, handwriting, voice, whatever's easiest right now.
 
-**DUE DATES** — Seeing your deadlines at a glance instead of being blindsided.
+**DUE DATES** put your deadlines in front of you instead of blindsiding you at 4pm on a Tuesday.
 
-**RECURRING REMINDERS** — Things that repeat (medication, pay rent, laundry) reset automatically. No shame, no streaks.
+**RECURRING REMINDERS** reset things that repeat (medication, pay rent, laundry) automatically. No shame, no streaks.
 
-**STATUS BADGES** — Visual emoji or icons so you scan instead of read. Red, yellow, green. Done, waiting, blocked.
+**STATUS BADGES** use visual emoji or icons so you scan instead of read. Red, yellow, green. Done, waiting, blocked.
 
-**URGENCY FILTERING** — Knowing what you can actually do right now (meetings are locked to specific times, emails can happen anytime, some tasks are waiting on other people).
+**URGENCY FILTERING** helps you know what you can actually do right now (meetings are locked to specific times, emails can happen anytime, some tasks are waiting on other people).
 
-**VISUAL CUSTOMIZATION** — Making it look like you. Your colors, your density, your vibe. Not a corporate template.
+**VISUAL CUSTOMIZATION** makes it look like you. Your colors, your density, your vibe. Not a corporate template.
 
 These seven pieces fit together. They're not independent systems. They're one design.
 
@@ -123,7 +123,7 @@ One system that works digital, on paper, or via voice. One design that you build
 
 Here's what you're actually trying to solve:
 
-You have work tasks, financial obligations, health stuff, home maintenance, relationships, goals you want to chase, and then there's the rest of life—the notifications and the invitations and the things people ask you to remember. It all lives in different places. Apple Notes has that one thing. Google Sheets has your budget. Your calendar has your meetings but not your errands. Your email inbox has decisions you haven't made. The grocery list is on your phone. Your therapist appointment is somewhere. That article you meant to read is in a browser tab. Your partner told you three weeks ago that you need to fix the kitchen light and you nodded and forgot about it approximately 47 seconds later.
+You have work tasks, financial obligations, health stuff, home maintenance, relationships, goals you want to chase, and then there's the rest of life, the notifications and the invitations and the things people ask you to remember. It all lives in different places. Apple Notes has that one thing. Google Sheets has your budget. Your calendar has your meetings but not your errands. Your email inbox has decisions you haven't made. The grocery list is on your phone. Your therapist appointment is somewhere. That article you meant to read is in a browser tab. Your partner told you three weeks ago that you need to fix the kitchen light and you nodded and forgot about it approximately 47 seconds later.
 
 So you've tried systems. Maybe you've tried a lot of them. Bullet journaling (pretty, but you stopped updating it in March). A productivity app (you installed it and never opened it again). A planner (physical, organized, and you lost it). A notes app (infinite scroll of your own chaos). A calendar (great for time-locked things, useless for the tasks that can happen anytime). Spreadsheets (you know exactly where everything is, but you never actually look at them). Or you've tried the system where you keep everything in your head and then you're exhausted all the time because the cognitive load of trying to remember where you put that one thing and whether you actually did that other thing is a full-time job you didn't apply for.
 
@@ -216,7 +216,7 @@ The QR codes on each page of this workbook are bridges. They're not meant to be 
 
 **Why this matters:**
 
-Your brain's job is having ideas, not storing them. Once something is written down—whether that's on paper or in the app or both—it's out of your head. You can stop holding it. This is the externalization that actually works.
+Your brain's job is having ideas, not storing them. Once something is written down whether that's on paper or in the app or both, it's out of your head. You can stop holding it. This is the externalization that actually works.
 
 You don't have to pick one tool and commit to it forever. You don't have to maintain perfect sync between paper and digital. You just have to get the thing out of your brain the second it exists. Write it down, voice-note it, photograph it, type it. Whichever is easiest right then.
 
@@ -256,7 +256,7 @@ Then later, when you have the energy, move it to the app (or don't). But the sys
 
 **Bottom sidebar note:**
 
-"The digital system has a "HELP! I'm in shutdown mode" button. It shows you one small task to start with. No choices, no decisions. Just a way back in. Your paper system is always readable, even when you can't think. Neither one judges you for how long it takes to get something into the digital version. The system learning you is the whole point."
+"The digital system has a 'HELP! I'm in shutdown mode' button. It shows you one small task to start with. No choices, no decisions. Just a way back in. Your paper system is always readable, even when you can't think. Neither one judges you for how long it takes to get something into the digital version. The system learning you is the whole point."
 
 
 ---
@@ -411,7 +411,7 @@ The guilt you feel about the lag time is the problem you're supposed to be solvi
 
 Quick Capture can live a lot of places. Your phone's notes app (fast), a voice memo (faster), a page in this workbook (tactile, no notifications), a stack of sticky notes (emergency backup), texts to yourself (if you have the emotional resilience to not read the text thread later and spiral about half-finished thoughts). You pick the method. And you can use multiple methods. Katie uses three different capture systems and they all feed the same dashboard. That's not failure. That's her brain knowing what works.
 
-The rule: if you think of something and don't write it down, it's gone. So write it down. Fast. Messy. Good enough. That's how you win.
+The rule: if you think of something and don't write it down, it's gone. So write it down. Fast. Messy. Good enough. That's the move.
 
 ---
 
@@ -474,9 +474,9 @@ The magic part is the lead time. Not just "this is due Tuesday." But "I want to 
 
 A work presentation needs to land on your radar a week before. Washing dishes can be "whenever you feel like it, but ideally before the sink actually becomes a science experiment." Your mother's birthday: probably more than one hour.
 
-You set the lead time. The system shows you things that are coming, not things that already happened. You feel prepared instead of ambushed. That's the whole thing.
+You set the lead time. The system shows you things that are coming, not things that already happened. You feel prepared instead of ambushed.
 
-Most people spend their entire ADHD life getting surprised by deadlines. You're about to spend it knowing they're there.
+Most people spend their entire ADHD life getting surprised by deadlines. You're about to change that.
 
 ---
 
@@ -531,11 +531,11 @@ Recurring Reminders reset themselves. You complete it. It vanishes. It comes bac
 
 No streak counter. No guilt if you miss one. No "I was doing so good" shame spiral. You did it or you didn't, and either way, it resets. The system doesn't judge. It just reminds you again.
 
-And here's the real thing: you're not using this to build a habit. You're not trying to change yourself. You're just trying to not forget things that matter. Your medication doesn't care if you have a "streak." It just cares if you took it. The system is the same way.
+And here's the real thing: you're not using this to build a habit. You're not trying to change yourself. You're just trying to not forget things that matter. Your medication doesn't care if you have a "streak." It just cares if you took it. The system works the same way.
 
 You can give each recurring thing an emoji or icon. Something visual so when you scan your list, you don't have to read. Just see 💊 and know it's time for medicine. See 🪴 and know it's plant water day.
 
-Frequency is up to you. Daily, weekly, monthly, "every other Thursday." And you can change it whenever you want. Three months from now if you realize "actually, twice a week makes way more sense," you change it. The system learns you.
+Frequency is up to you. Daily, weekly, monthly, "every other Thursday." And you can change it whenever you want. Three months from now if you realize "actually, twice a week makes way more sense," you change it. The system adapts.
 
 ---
 
@@ -682,7 +682,7 @@ Your ANYTIME things are: email, report writing, Slack messages, task work, anyth
 
 Your BLOCKED things are: designer is sending you mockups (waiting), boss hasn't approved the budget (waiting), vendor hasn't sent the quote (waiting).
 
-Here's how this helps: You know your flow time is 10:30-12 and 1-2pm. Those are your deep-focus hours. Don't schedule anything during those times. Don't let meetings stack there. That's when you do the work that needs actual thinking. Protect it.
+You know your flow time is 10:30 to 12 and 1 to 2pm. Those are your deep-focus hours. Don't schedule anything during those times. Don't let meetings stack there. That's when you do the work that actually requires thinking. Protect those windows.
 
 From 12 to 12:30 and 2 to 3, you've got smaller chunks. Perfect for email or quick tasks. Fits naturally.
 
@@ -690,7 +690,7 @@ From 12 to 12:30 and 2 to 3, you've got smaller chunks. Perfect for email or qui
 
 The BLOCKED things just sit. They're not blocking you from everything else. They're just sitting there, noted, waiting.
 
-You're not busier. You're just decided.
+You're not busier. You're just decided about how your day actually works.
 
 ---
 
@@ -698,7 +698,7 @@ You're not busier. You're just decided.
 
 If you set your own hours and projects overlap and clients text at random times:
 
-Your TIME-LOCKED things might look like: client call at 2pm today (you didn't know until this morning), deadline for design work is Thursday (you need to hit that), collaborator meeting is next Tuesday, anything with a specific date/time that you can't move.
+Your TIME-LOCKED things might look like: client call at 2pm today (you didn't know until this morning), deadline for design work is Thursday (you need to hit that), collaborator meeting is next Tuesday, anything with a specific date or time that you can't move.
 
 Your ANYTIME things are: your own design work, writing proposals, admin tasks, anything you control the timing on. These are flexible.
 
@@ -767,11 +767,11 @@ Choices: Do you want minimal and clean, or chaotic and colorful? Do you want emo
 
 There's no "right" aesthetic. There's just "does this make you want to open it?"
 
-Katie wants clean and minimal with strategic pops of color. Someone else wants emoji-heavy chaos. Someone else wants it to look like a notebook they'd doodle in. All of those are valid. All of those keep people engaged.
+Katie wants clean and minimal with strategic pops of color. Someone else wants emoji-heavy chaos. Someone else wants it to look like a notebook they'd doodle in. All of those work. All of those keep people engaged.
 
-And here's the real thing: you can change it whenever you want. Three weeks in, if you realize "actually, I hate this color," you change it. Your visual system isn't failing. You're just learning what actually works for you.
+And here's the real thing: you can change it whenever. Three weeks in, if you realize "actually, I hate this color," you change it. Your system isn't failing. You're just learning what works.
 
-The system learning you is the whole point.
+This is the system learning you.
 
 ---
 
@@ -816,7 +816,7 @@ You're not designing for anyone else. You're designing for the person who's actu
 
 ---
 
-## SPREADS 23-24: ASSEMBLY & NEXT STEPS
+## SPREADS 23-24: ASSEMBLY + NEXT STEPS
 
 ### SPREAD 23 (LEFT PAGE): You Just Designed Your Personal Operating System
 
@@ -826,17 +826,17 @@ You didn't inherit this system. You didn't try to learn someone else's. You didn
 
 You designed around who you are.
 
-This is your system. And here's what's really important: none of it is permanent.
+This is your system. And here's what matters: none of it is permanent.
 
 In three weeks, one of your tabs doesn't work anymore. Delete it. Add a new one.
 
 In two months, you realize you need a fourth recurring reminder. Add it.
 
-In six months, you hate the colors. Change them. The system doesn't care. It's learning you.
+In six months, you hate the colors. Change them. The system doesn't care. It's adapting to you.
 
-You didn't fail if something doesn't stick. The setup was the test. You're adjusting. That's what it looks like to build around how you actually work instead of forcing yourself to be different.
+You didn't fail if something doesn't stick. The setup was the test. You're adjusting. That's what happens when you build around how you actually work instead of forcing yourself to be different.
 
-The system failing means the system wasn't right yet. It doesn't mean you were failing.
+A system that doesn't work is just feedback. It means the design needs to shift, not that you're broken.
 
 ---
 
@@ -878,7 +878,7 @@ You don't have to be different to use this system. You don't have to become some
 
 You have to stop punishing yourself for being who you are.
 
-That's the whole thing.
+That's it.
 
 Your system knows you now.
 
