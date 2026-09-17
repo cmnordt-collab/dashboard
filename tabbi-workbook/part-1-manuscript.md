@@ -258,3 +258,261 @@ Then later, when you have the energy, move it to the app (or don't). But the sys
 
 "The digital system has a "HELP! I'm in shutdown mode" button. It shows you one small task to start with. No choices, no decisions. Just a way back in. Your paper system is always readable, even when you can't think. Neither one judges you for how long it takes to get something into the digital version. The system learning you is the whole point."
 
+
+---
+
+## SPREADS 5-6: THE SEVEN ELEMENTS
+
+### SPREAD 5 (LEFT PAGE): Here's What You're About to Design
+
+You've built a system. Now comes the part where you actually tell it how you work.
+
+We've pulled seven core pieces from years of watching people with ADHD get things done. None of them are revolutionary. They're just the ones that actually stick because they match how your brain works, not how you think you should work.
+
+**Tabs.** One space per area of your life. Work, home, health, the specific friendship that requires its own emotional container. You pick the tabs. Nobody else gets a vote.
+
+**Quick Capture.** The brain dump bucket. Your thought doesn't have to be organized to count. It just has to be out of your head.
+
+**Due Dates.** Deadlines with lead time. So you know they're coming instead of getting blindsided at 4pm on a Tuesday.
+
+**Recurring Reminders.** The things that repeat. No guilt. No streaks. Just reset.
+
+**Status Badges.** Visual priority. Red, yellow, green, or whatever system makes your brain happy. Scan instead of read.
+
+**Urgency Filtering.** Not just "when is this due," but "can I actually do this right now?" Time-locked vs. anytime vs. waiting-on-someone-else. Massive difference.
+
+**Visual Customization.** Make it look like something you want to open. Not professional. Just yours.
+
+You don't have to use all seven. Most people land on three or four and that's perfect.
+
+---
+
+### SPREAD 6 (RIGHT PAGE): Which Ones Actually Matter to You?
+
+Read through the seven. Don't overthink it.
+
+**1. Which ones made you think "oh, I actually need that"?**
+
+(Checkbox list: Tabs / Quick Capture / Due Dates / Recurring Reminders / Status Badges / Urgency Filtering / Visual Customization)
+
+[Space to mark]
+
+**2. Which ones made you think "nope, definitely not for me"?**
+
+[Checkbox list: same seven]
+
+[Space to mark]
+
+**3. If you could only use THREE of these seven, which would they be?**
+
+Don't think about what you should want. Think about what would actually make your life easier if it existed tomorrow.
+
+[Blank space for writing]
+
+**4. Why those three? What problem does each one solve?**
+
+(This is the real question. The first answer is just noise.)
+
+[Blank space for writing]
+
+**5. Honest question: Is there something you're currently doing that would disappear if one of these existed?**
+
+Like, is there a thing you dread every week that shouldn't exist at all?
+
+[Blank space for writing]
+
+Your answers here are your system's foundation. Everything that comes next builds from what you just said matters.
+
+
+---
+
+## SPREADS 7-8: ELEMENT 1 - TABS
+
+### SPREAD 7 (LEFT PAGE): One Tab Per Area That Matters
+
+Your life is not one thing. It's seventeen things that all need attention and keep trying to become the same thing if you're not careful.
+
+A tab is just a container. Work doesn't get to live in the same space as your friend's wedding drama, which doesn't get to live in the same space as your medical appointment notes. Each tab is a separate world. Things stay in their boxes.
+
+The genius part: you decide the boxes. There's no required tab. There's no "most important" tab. There's just the areas of your life that deserve separation so they don't contaminate each other.
+
+Some people use: Work, Finance, Home, Health, Goals, Relationships, Creative. Some people use: Day Job, Design Clients, House Stuff, Nope Folder (the things they're avoiding), Body, People, Creative (Things That Feed Me).
+
+Katie's tabs are different from yours. Your tabs are different from mine. The system doesn't care what they're called. It cares that when you open the Work tab, you're not also looking at your relationship stress or whether you remembered to pay the electric bill.
+
+That's the thing about ADHD: context switching costs you everything. You switch from one tab in your brain to another and lose thirty minutes. So you're building a system where the context is already separated. You don't have to hold it all at once.
+
+Start with three tabs. Three is stable. Three is "I know what I'm looking at." Four is still honest. Five starts getting abstract. You can add more later when you know what you're actually doing.
+
+---
+
+### SPREAD 8 (RIGHT PAGE): Design Your Tabs
+
+This is where the system starts to become yours.
+
+**1. What are the main areas of your life right now?**
+
+Don't edit. Don't think about whether they should matter. What actually takes up your time and energy? List them all.
+
+[Blank space for writing]
+
+**2. Of those, which ones deserve their own container?**
+
+Which ones get confused with each other if you don't separate them? Which ones do you want to think about separately?
+
+[Blank space for writing]
+
+**3. Pick a name for each tab.**
+
+Formal names are fine. Ridiculous names are better. "Finance" is boring. "Money Bledge" is the kind of thing you'll actually remember. "Home Stuff" is fine. "The House Speaks" is the kind of thing you'll smile at when you open it.
+
+- Tab 1: _______________
+- Tab 2: _______________
+- Tab 3: _______________
+- Tab 4: _______________ (only if you need it)
+
+**4. Add an emoji or visual for each one.**
+
+Something that makes you happy when you see it. This is dopamine mining. Real literal mining. Use the good stuff.
+
+- Tab 1: ___
+- Tab 2: ___
+- Tab 3: ___
+- Tab 4: ___ (if you have it)
+
+**5. Honest question: Is there a tab that doesn't exist yet but you know you need?**
+
+Not something you should have. Something you actually know you need because it's been living in your brain taking up space.
+
+Examples: "Stuff I'm Avoiding" (the legitimate holding zone for the things you're gonna deal with eventually), "Medical" (so your doctor notes aren't mixed with everything else), "That One Friend's Drama" (the specific friendship that requires its own container because it's complicated).
+
+[Blank space for writing]
+
+You just built your world. Everything else lives inside it.
+
+
+---
+
+## SPREADS 9-10: ELEMENT 2 - QUICK CAPTURE
+
+### SPREAD 9 (LEFT PAGE): Your Thought Doesn't Have to Be Organized to Count
+
+Here's what happens in an ADHD brain when you have a good idea: you have six seconds to write it down before it's gone.
+
+Not six minutes. Six seconds. And you don't have time to organize it into the right tab. You don't have time to format it. You don't even have time to make sure the letters are legible. You just need it out of your head.
+
+Quick Capture is the bucket. The inbox. The emergency room. Nothing is organized. Everything is valid.
+
+"Pick up milk" and "the concept for a novel I'll never write" and "my shoulder hurts and I'm worried" and a half-sentence you didn't finish all live in the same bucket. That's perfect. That's the point. You're not deciding what goes where. You're just evacuating.
+
+The word "queue" is important here. It's a queue, not a filing system. Things sit in there for however long they sit. Three minutes, three hours, three weeks. You transfer them to their actual tabs when you have energy. Or when you forget about them and then stumble across them. Both are fine.
+
+The guilt you feel about the lag time is the problem you're supposed to be solving here. So get ahead of that: the transfer doesn't have to happen fast. It doesn't have to happen organized. It happens when it happens. Your brain's job is having ideas. Storage is infrastructure.
+
+Quick Capture can live a lot of places. Your phone's notes app (fast), a voice memo (faster), a page in this workbook (tactile, no notifications), a stack of sticky notes (emergency backup), texts to yourself (if you have the emotional resilience to not read the text thread later and spiral about half-finished thoughts). You pick the method. And you can use multiple methods. Katie uses three different capture systems and they all feed the same dashboard. That's not failure. That's her brain knowing what works.
+
+The rule: if you think of something and don't write it down, it's gone. So write it down. Fast. Messy. Good enough. That's how you win.
+
+---
+
+### SPREAD 10 (RIGHT PAGE): Your Capture Method
+
+You need to know how your brain actually receives information.
+
+**1. How do you want to capture things?**
+
+Check the ones that feel realistic. Not the ones that sound good. The ones you'll actually do when your brain is moving at full speed.
+
+- [ ] Type on phone
+- [ ] Voice note
+- [ ] Handwrite in this workbook
+- [ ] Take a photo
+- [ ] Text yourself
+- [ ] Sticky note
+- [ ] Other: _______________
+
+**2. What method feels easiest when your brain is moving fast?**
+
+The one you reach for without thinking. The one that's already in your hand.
+
+[Blank space for writing]
+
+**3. On a bad brain day, what's the absolute minimum friction capture method?**
+
+Not the prettiest. Not the most organized. The one you'll actually do when you can barely function.
+
+[Blank space for writing]
+
+**4. How often will you transfer things from Quick Capture to their tabs?**
+
+Daily? Weekly? "When I stumble across them"? Be honest. Don't commit to something that feels fake.
+
+[Blank space for writing]
+
+**5. Sketch or write: What does your Quick Capture setup look like?**
+
+Is it a page in this book? An app on your phone? A notebook? A pile of voice memos? A combination? Draw it. Describe it. Show what's actually realistic.
+
+[Blank space for sketching or writing]
+
+The goal here is not perfection. The goal is "fast enough that you actually do it."
+
+
+---
+
+## SPREADS 11-12: ELEMENT 3 - DUE DATES
+
+### SPREAD 11 (LEFT PAGE): So You Don't Get Blindsided
+
+You know that feeling at 4pm on a Tuesday when you realize something was due yesterday?
+
+That's not because you forgot. It's because you never saw it coming. The deadline existed in a calendar you don't check or in an email thread that got buried or in someone else's brain instead of stored somewhere you could actually see it.
+
+Due dates aren't judgment. They're visibility. They're "here's a thing you need to be aware of."
+
+The magic part is the lead time. Not just "this is due Tuesday." But "I want to know about this three days before, so I actually have time to think about it." Or one week. Or one hour. Depends on the thing.
+
+A work presentation needs to land on your radar a week before. Washing dishes can be "whenever you feel like it, but ideally before the sink actually becomes a science experiment." Your mother's birthday: probably more than one hour.
+
+You set the lead time. The system shows you things that are coming, not things that already happened. You feel prepared instead of ambushed. That's the whole thing.
+
+Most people spend their entire ADHD life getting surprised by deadlines. You're about to spend it knowing they're there.
+
+---
+
+### SPREAD 12 (RIGHT PAGE): Map Your Deadlines
+
+What actually has a deadline in your life?
+
+**1. What kinds of things have deadlines?**
+
+Work projects? Bills? Appointments? Car maintenance? Friend stuff? License renewal? That thing you keep saying you'll do?
+
+[Blank space for brainstorming]
+
+**2. For each type, how much lead time do you actually need to feel prepared?**
+
+Not "how much time should I need in a perfect world." How much time do you actually need to start thinking about it without panicking?
+
+- Work deadline: _____ days notice
+- Bills: _____ days notice
+- Appointments: _____ days notice
+- Car stuff: _____ days notice
+- Other: _____________
+
+**3. Do you want due dates in the app, in this workbook, or both?**
+
+The app is good for things that move. The workbook is good for things you like to see on paper. Some people use both.
+
+[Blank space for writing]
+
+**4. What's something you keep getting blindsided by?**
+
+Not something you forgot. Something you had no idea was coming.
+
+How far in advance would you have needed notice to actually prepare?
+
+[Blank space for writing]
+
+Your lead time is not laziness. It's knowing yourself.
+
