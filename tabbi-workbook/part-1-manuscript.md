@@ -9,7 +9,7 @@
 
 **How to Use This Workbook**
 
-This workbook is a working journal, not a textbook. You're going to sketch, write, cross things out, change your mind, and come back to pages weeks later with new ideas. That's exactly what it's for.
+This workbook is a workbook + journal, not a textbook. You're going to sketch, write, cross things out, change your mind, and come back to pages weeks later with new ideas. That's exactly what it's for.
 
 You can move through this at whatever pace makes sense:
 
@@ -33,9 +33,13 @@ The digital version handles speed and sync. The physical version handles resilie
 
 ### About Making Choices
 
-You're about to pick colors, emoji density, whether you want text or visual, how many tabs, what your capture methods are. That sounds like a lot of decisions.
+You're about to pick colors, graphics, whether you want text or visual, how many tabs, what your capture methods are. That sounds like a lot of decisions.
 
 Here's the thing: you're not trying every option and optimizing. You're picking one that sounds good, and if it stops working three weeks later, you change it. That's it. The system learns you through adjusting, not through perfect initial setup.
+
+Growing up with ADHD (diagnosed or not) gave a lot of us shame and frustration. We were told to try harder, organize better, remember more, focus harder. We learned to punish ourselves for not being different. We're trying to break that pattern here.
+
+This system is about giving yourself permission. Permission to try new things. Permission to accept yourself as you are. Permission to treat yourself with kindness instead of judgment. And this workbook reinforces that at every step.
 
 If you're paralyzed by options, just go with whatever feels most appealing in the moment. The workbook will assign defaults that work, and you'll adjust as you use it.
 
