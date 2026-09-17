@@ -332,7 +332,7 @@ Your answers here are your system's foundation. Everything that comes next build
 
 ### SPREAD 7 (LEFT PAGE): One Tab Per Area That Matters
 
-Your life is not one thing. It's seventeen things that all need attention and keep trying to become the same thing if you're not careful.
+Your life is not one thing. It's seventeen spinning plates that all need attention and they all keep changing speeds or trying to fall, and it's your job to manage them.
 
 A tab is just a container. Work doesn't get to live in the same space as your friend's wedding drama, which doesn't get to live in the same space as your medical appointment notes. Each tab is a separate world. Things stay in their boxes.
 
