@@ -222,6 +222,8 @@ You don't have to pick one tool and commit to it forever. You don't have to main
 
 Then later, when you have the energy, move it to the app (or don't). But the system isn't punishing you for that lag time. The system is just glad you didn't lose the thought in the first place.
 
+The digital system can send you notifications, sync to your calendar, or keep everything internal. You decide what connects to your existing digital life and what stays inside Tabbi. Some people want TIME-LOCKED things automatically in Calendar with notifications pinging them. Some people want Tabbi to be its own separate space. Both work. You design the bridges based on how your brain actually works.
+
 ---
 
 ### SPREAD 4 (RIGHT PAGE): Your Capture System
