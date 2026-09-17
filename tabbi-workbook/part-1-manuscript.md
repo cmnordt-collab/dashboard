@@ -645,3 +645,106 @@ What would you call it? How would it look?
 
 Your status system is a language. Make it one your brain actually speaks.
 
+
+---
+
+## SPREADS 17-20: ELEMENT 6 - URGENCY FILTERING
+
+### SPREAD 17 (LEFT PAGE): Can You Do This Right Now?
+
+Time blindness isn't just "I don't know when things are due."
+
+It's "I have no idea if I can do this at the exact moment I want to do it."
+
+So you sit down to work and spend forty-five minutes deciding whether to answer email or write or take a call or handle admin. You could do any of them right now, but you don't know which one is actually possible, so you do nothing. Or you do the wrong one and then have to context switch and lose an hour.
+
+Urgency Filtering solves that by putting every task in one of three categories:
+
+**TIME-LOCKED** things are meetings, calls, appointments. Things that happen at a specific hour. You can't move them. They block time.
+
+**ANYTIME** things are email, writing, small tasks, chores. Things you can do whenever. They fit in the gaps.
+
+**BLOCKED** things are waiting for someone else. You emailed them. You're waiting on feedback. You can't move forward yet.
+
+When your brain is chaotic, knowing what KIND of task something is saves your entire day. You know: from 2 to 3 I have a meeting, so I can't start anything that takes deep focus. At 3 to 5 I have open time, so I can either do ANYTIME work or just acknowledge that BLOCKED things are still stuck. At 6 to 8 I have nothing scheduled, so I can do whatever I want. The decision is already made.
+
+It's not about being productive. It's about not spending all your energy deciding what you're supposed to be doing.
+
+---
+
+### SPREAD 18 (LEFT PAGE): Urgency Filtering - The 9-to-5 Reality
+
+If you have a job with predictable hours and scheduled meetings:
+
+Your TIME-LOCKED things might look like: status meetings at 10am, 1-on-1 with your manager at 2pm, client call at 3:30pm, lunch break at 12:30.
+
+Your ANYTIME things are: email, report writing, Slack messages, task work, anything that doesn't need a specific time slot. You can usually do these between meetings.
+
+Your BLOCKED things are: designer is sending you mockups (waiting), boss hasn't approved the budget (waiting), vendor hasn't sent the quote (waiting).
+
+Here's how this helps: You know your flow time is 10:30-12 and 1-2pm. Those are your deep-focus hours. Don't schedule anything during those times. Don't let meetings stack there. That's when you do the work that needs actual thinking. Protect it.
+
+From 12 to 12:30 and 2 to 3, you've got smaller chunks. Perfect for email or quick tasks. Fits naturally.
+
+3:30 to 5 you're usually tired anyway. That's Slack management time, admin time, "close out the day" time.
+
+The BLOCKED things just sit. They're not blocking you from everything else. They're just sitting there, noted, waiting.
+
+You're not busier. You're just decided.
+
+---
+
+### SPREAD 19 (LEFT PAGE): Urgency Filtering - The Freelance Reality
+
+If you set your own hours and projects overlap and clients text at random times:
+
+Your TIME-LOCKED things might look like: client call at 2pm today (you didn't know until this morning), deadline for design work is Thursday (you need to hit that), collaborator meeting is next Tuesday, anything with a specific date/time that you can't move.
+
+Your ANYTIME things are: your own design work, writing proposals, admin tasks, anything you control the timing on. These are flexible.
+
+Your BLOCKED things are: waiting for client feedback on Phase 1 (can't start Phase 2), waiting for payment to process (can't pay contractors), waiting for contractor to finish their piece (can't move forward).
+
+The problem with variable schedules is you can't predict your day. So this system doesn't predict it. It just lets you know what KIND of thing each task is. When a client calls, you know that's TIME-LOCKED and it's interrupting, so you can decide: do I have time for a 30-minute call right now or do I need to reschedule? You're making the decision from a place of knowing, not panicking.
+
+Your deep-focus time is "whenever you have two hours without interruptions." Those are your ANYTIME hours. Protect them the same way. Don't schedule calls during those windows if you can avoid it.
+
+The BLOCKED things are more of a stressor for freelancers because they literally block your income. But naming them as BLOCKED helps. You know that project is stuck. You know what you're waiting on. You can decide to follow up instead of just getting frustrated in silence.
+
+---
+
+### SPREAD 20 (RIGHT PAGE): Your Urgency Map
+
+Which of your tasks are which?
+
+**1. What TIME-LOCKED things are in your life?**
+
+Anything that MUST happen at a specific hour. Things you can't move.
+
+[Blank space for writing]
+
+**2. What ANYTIME things do you do?**
+
+Things that could happen whenever. Things you have control over.
+
+[Blank space]
+
+**3. What BLOCKED things are you waiting on?**
+
+Things you can't move forward on until someone else does something.
+
+[Blank space]
+
+**4. Knowing your TIME-LOCKED tasks, when does your actual free time exist?**
+
+Not "when should I have free time." When do you actually have it?
+
+[Blank space]
+
+**5. Of your ANYTIME tasks, which ones actually need focus and which ones can happen while distracted?**
+
+Email doesn't need focus. Deep design work does. Know the difference.
+
+[Blank space]
+
+This is the system knowing how your day actually works.
+
