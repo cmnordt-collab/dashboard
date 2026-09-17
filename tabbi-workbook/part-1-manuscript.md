@@ -411,7 +411,7 @@ The word "queue" is important here. It's a queue, not a filing system. Things si
 
 The guilt you feel about the lag time is the problem you're supposed to be solving here. So get ahead of that: the transfer doesn't have to happen fast. It doesn't have to happen organized. It happens when it happens. Your brain's job is having ideas. Storage is infrastructure.
 
-Quick Capture can live a lot of places. Your phone's notes app (fast), a voice memo (faster), a page in this workbook (tactile, no notifications), a stack of sticky notes (emergency backup), texts to yourself (if you have the emotional resilience to not read the text thread later and spiral about half-finished thoughts). You pick the method. And you can use multiple methods. Katie uses three different capture systems and they all feed the same dashboard. That's not failure. That's her brain knowing what works.
+Quick Capture can live a lot of places. Your phone's notes app (fast), a voice memo (faster), a page in this workbook (tactile, no notifications), a stack of sticky notes (emergency backup), texts to yourself (if you have the emotional resilience to not read the text thread later and spiral about half-finished thoughts), a notepad on your bedside table for 3am thoughts (photograph it with your phone, upload it to Tabbi, let the OCR figure out what you wrote). You pick the method. And you can use multiple methods. Katie uses three different capture systems and they all feed the same dashboard. That's not failure. That's her brain knowing what works.
 
 The rule: if you think of something and don't write it down, it's gone. So write it down. Fast. Messy. Good enough. That's the move.
 
