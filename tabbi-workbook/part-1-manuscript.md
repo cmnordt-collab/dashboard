@@ -886,3 +886,41 @@ Your system knows you now.
 
 Go design.
 
+
+---
+
+## [PENDING: ELEMENT 0 - TO BE WRITTEN]
+
+### [SPREAD TBD: Before You Design Anything Else - LEFT PAGE]
+
+[Structure: TIME-LOCKED calendar block, non-dismissible, protectable but flexible on timing]
+
+[Stakes: When this disappears, the system fails. Not a coping mechanism (different language). Not a missed appointment. It's the infrastructure that keeps you functional.]
+
+[Language options to test: Anchor / Essential Block / "Me time" / What Keeps You Standing / Your Sustaining Practice]
+
+### [SPREAD TBD: Before You Design Anything Else - RIGHT PAGE]
+
+[Prompts: Identify it. When do you do it (specific time or flexible). How would you know if you missed it. What breaks when it's gone.]
+
+[Calendar marking: NON-NEGOTIABLE TIME (not dismissible notification, not missed appointment, just protected time)]
+
+---
+
+## [CROWDSOURCING ITEMS]
+
+1. **Language for Element 0:** What do we call the essential protected time that keeps you functional? Anchor? Essential Block? Sustaining Practice? "Me time"? Something else?
+   - Test with sisters and feedback form users
+   - Consider how it feels to name this thing explicitly
+
+2. **Part 2 Life-Situation Profiles:** Six scenarios to develop
+   - Student
+   - Freelancer  
+   - Employed (9-5)
+   - Parent
+   - Caregiver
+   - Job Seeker
+   - *Question: Are these the right 6, or do they need adjustment based on sister feedback?*
+
+3. **Shutdown Mode Behavior:** Does the coping/anchor mechanism show up as the first suggestion, or should it be customizable per user?
+
