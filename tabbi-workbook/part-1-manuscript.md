@@ -127,7 +127,7 @@ You have work tasks, financial obligations, health stuff, home maintenance, rela
 
 So you've tried systems. Maybe you've tried a lot of them. Bullet journaling (pretty, but you stopped updating it in March). A productivity app (you installed it and never opened it again). A planner (physical, organized, and you lost it). A notes app (infinite scroll of your own chaos). A calendar (great for time-locked things, useless for the tasks that can happen anytime). Spreadsheets (you know exactly where everything is, but you never actually look at them). Or you've tried the system where you keep everything in your head and then you're exhausted all the time because the cognitive load of trying to remember where you put that one thing and whether you actually did that other thing is a full-time job you didn't apply for.
 
-The problem isn't that you're broken. The problem is that none of these tools match how your brain actually works.
+The problem isn't that you're broken. The problem is that none of these tools match how your brain actually works. With ADHD, out of sight means out of mind. If something isn't actively visible or pushing notifications at you, it ceases to exist. So you've ended up with a system built entirely on invisible tools, and then you're surprised when you forget things that are just sitting in an app you never opened.
 
 **This system is different because:**
 
@@ -205,6 +205,8 @@ Here's a hard fact: you're not going to remember everything in an app. And you'r
 The workbook and the digital dashboard are the same system. Same tabs, same structure, same design. But they work differently because your brain works differently on different days.
 
 **The paper version is your resilience backup.** Phone dies. You are shutting down and can't look at screens. Your energy is at zero and opening an app feels like climbing a mountain. You flip open the workbook and there's your system. On paper. In your handwriting. It's still there.
+
+This matters because out of sight means out of mind for ADHD brains. If something isn't actively visible, it doesn't exist. The app can have everything perfectly organized, but if you don't open it, it's just invisible. The paper system stays visible. It's on your desk or your nightstand. It's a physical thing you can see and touch. That visibility is part of the system, not separate from it.
 
 The digital version is your speed system. Quick capture, instant syncing, reminders that ping you at 2pm, searchable everything. It's the tool you reach for when your brain is running fast and you need to get thoughts out before they disappear.
 
